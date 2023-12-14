@@ -31,13 +31,13 @@ const Footer = () => {
           </p>
           <p className=" flex items-center px-1  gap-1">
             <Image
-              className=" rounded-full w-4"
-              src="/netlify.svg"
+              className="  w-4"
+              src="/vercel.svg"
               width={200}
               height={200}
               alt="avatar"
             />
-            Netlify
+          Vercel
           </p>
         </div>
         <div>

@@ -30,20 +30,25 @@ const Navbar = () => {
               Home
             </li>
           </Link>
-
-          <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
+          <Link href="/about"> <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
             About
-          </li>
-          <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
+          </li></Link>          <Link href="/projects">  <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
             {" "}
             Projects
-          </li>
-          <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
+          </li></Link>
+
+          <Link href="/technology">  <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
             Technology
-          </li>
-          <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2 ">
+          </li></Link>
+          <Link href="/blog"><li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2 ">
             Blog
-          </li>
+          </li></Link>
+
+
+         
+        
+        
+          
           <button className=" pl-20" onClick={handleClickToggle}>
             {isToggled ? (
               <div className=" text-yellow-600 text-[20px]">
