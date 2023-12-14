@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+}
+
+.light {
+  --bg-color: #e6e6e6;
+  --text-color: #000000;
+}
+
+body {
+  /* background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; */
+  background-color: #e6e6e6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
