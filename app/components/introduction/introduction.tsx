@@ -6,7 +6,7 @@ const Introduction = () => {
     <div className="  flex justify-center ">
       <div className="  flex w-3/5 ">
         <div className="w-2/4 p-4 ">
-          <h1 className=" font-bold text-3xl  ">Hey, I'm Bishal.</h1>
+          <h1 className=" font-bold text-3xl  ">Hey, I am  Bishal.</h1>
           <p className="text-md pt-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
             quod quia temporibus odit ea, voluptates ipsum veniam expedita,
