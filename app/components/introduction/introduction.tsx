@@ -5,13 +5,13 @@ const Introduction = () => {
   return (
     <div className="  flex justify-center ">
       <div className="  flex w-3/5 ">
-        <div className="w-2/4 p-4 ">
-          <h1 className=" font-bold text-3xl  ">Hey, I am  Bishal.</h1>
-          <p className="text-md pt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            quod quia temporibus odit ea, voluptates ipsum veniam expedita,
-            tempora fugit quam explicabo hic sunt, vero officia sequi illum
-            eaque.
+        <div className="w-2/4 flex flex-col gap-2">
+          <h1 className=" text-xl font-bold text-gray-500">Hy there!</h1>
+          <p className=" text-3xl text-blue-900 font-extrabold">
+        Bishal Thapa
+          </p>
+          <p className="text-md">
+          I&apos;m a Frontend Developer based in Kathmandu,Nepal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio labore impedit temporibus iure, reiciendis fugiat quas officia. Omnis, nobis expedita.
           </p>
         </div>
         <div className=" w-2/4 flex justify-center">

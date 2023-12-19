@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className="flex justify-center my-6 ">
       <div className=" px-12 bg-white sm:block py-2 rounded-xl hidden w-3/5 ">
         <ul className="  gap-8 min-[640px]:flex items-center  ">
-          <li className=" hover:cursor-pointer  font-bold underline text-xl rounded-xl p-2">
+          <Link href="/"><li className=" hover:cursor-pointer font-bold underline text-xl rounded-xl p-2">
             <Image
               className=" rounded-full w-10"
               src="/avatar.png"
@@ -24,12 +24,7 @@ const Navbar = () => {
               height={200}
               alt="avatar"
             />
-          </li>
-          <Link href="/">
-            <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
-              Home
-            </li>
-          </Link>
+          </li></Link>
           <Link href="/about"> <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
             About
           </li></Link>          <Link href="/projects">  <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
@@ -42,14 +37,8 @@ const Navbar = () => {
           </li></Link>
           <Link href="/blog"><li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2 ">
             Blog
-          </li></Link>
-
-
-         
-        
-        
-          
-          <button className=" pl-20" onClick={handleClickToggle}>
+          </li></Link>              
+          <button className=" pl-20 " onClick={handleClickToggle}>
             {isToggled ? (
               <div className=" text-yellow-600 text-[20px]">
                 {" "}
@@ -61,7 +50,13 @@ const Navbar = () => {
               </div>
             )}
           </button>
-        </ul>
+          <Image
+              className=" rounded-full w-10"
+              src="/nepalflag.svg"
+              width={200}
+              height={200}
+              alt="avatar"
+            /></ul>
       </div>
     </div>
   );
