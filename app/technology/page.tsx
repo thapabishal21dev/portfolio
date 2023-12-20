@@ -15,14 +15,14 @@ import figma from '../../public/figma.svg'
 
 const Technology = () => {
   return <div className="flex justify-center">
-    <div className=" w-3/5">
+    <div className=" w-2/5">
     <div>
     <h1 className=" text-center text-transparent text-5xl font-extrabold bg-clip-text bg-gradient-to-r from-yellow-200 to-red-500"
 >
   Tech Stack
 </h1>
 </div>
-<div className=" w-full  p-2 my-12 justify-items-center grid grid-cols-3 gap-10 ">
+<div className="   p-2 my-12 justify-items-center grid grid-cols-3 gap-10 ">
   <a href="https://react.dev/"><SingleTech name={"ReactJs"} image={reactjs} /></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><SingleTech name={"JavaScript"} image={javascript}/></a>
   <a href="https://www.typescriptlang.org/">  <SingleTech name={"TypeScript"} image={typescript}   />

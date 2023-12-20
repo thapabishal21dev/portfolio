@@ -9,7 +9,7 @@ image:any
 const SingleTech = (props:ITech) => {
   return (
     <div>
-<div className=" w-24 px-1  py-2 gap-2 flex flex-col items-center hover:bg-gradient-to-r from-cyan-500 to-slate-500 hover:cursor-pointer hover:text-white rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover">
+<div className=" w-24 px-1 py-2 gap-2 flex flex-col items-center hover:bg-gradient-to-r from-cyan-500 to-slate-500 hover:cursor-pointer hover:text-white rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover">
         <Image
               className="w-12"
               src={props.image}

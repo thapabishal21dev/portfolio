@@ -41,7 +41,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <p className=" font-bold text-gray-500">
+          <p className=" font-bold  bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
            Made by Bishal Thapa
           </p>
         </div>
