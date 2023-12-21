@@ -50,13 +50,7 @@ const Navbar = () => {
               </div>
             )}
           </button>
-          <Image
-              className=" rounded-full w-10"
-              src="/nepalflag.svg"
-              width={200}
-              height={200}
-              alt="avatar"
-            /></ul>
+          </ul>
       </div>
     </div>
   );
