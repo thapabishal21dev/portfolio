@@ -14,7 +14,7 @@ import figma from '../../public/figma.svg'
 
 
 const Technology = () => {
-  return <div className="flex justify-center">
+  return <div className="flex justify-center mt-12">
     <div className=" w-2/5">
     <div>
     <h1 className=" text-center text-transparent text-5xl font-extrabold bg-clip-text bg-gradient-to-r from-yellow-200 to-red-500"

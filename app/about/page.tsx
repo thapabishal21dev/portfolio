@@ -39,7 +39,7 @@ const About = () => {
       </p>
     </div>
     <div className=" my-6">
-      <h1 className=" underline cursor-pointer text-center text-green-500"><Link href="https://github.com/thapabishal21tech" target="_blank">@thapabishal21tech on Github - {thisYear.getFullYear()}</Link></h1>
+      <h1 className=" underline cursor-pointer text-center text-green-600"><Link href="https://github.com/thapabishal21tech" target="_blank">@thapabishal21tech on Github - {thisYear.getFullYear()}</Link></h1>
       <GitHubCalendar  
  showWeekdayLabels={true} maxLevel={2} style={{margin:"10px auto "}} 
   

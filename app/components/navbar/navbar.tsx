@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center my-6 ">
-      <div className=" px-12 bg-white sm:block py-2 rounded-xl hidden w-3/5 ">
+      <div className=" px-12 bg-slate-200 sm:block py-2 rounded-xl hidden w-3/5 ">
         <ul className="  gap-8 min-[640px]:flex items-center  ">
           <Link href="/"><li className=" hover:cursor-pointer font-bold underline text-xl rounded-xl p-2">
             <Image
@@ -25,9 +25,9 @@ const Navbar = () => {
               alt="avatar"
             />
           </li></Link>
-          <Link href="/about"> <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
+          <Link href="/about"> <li className=" hover:cursor-pointer hover:bg-[#ffffff] rounded-xl p-2">
             About
-          </li></Link>          <Link href="/projects">  <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
+          </li></Link><Link href="/projects">  <li className=" hover:cursor-pointer hover:bg-[#e6e6e6] rounded-xl p-2">
             {" "}
             Projects
           </li></Link>
