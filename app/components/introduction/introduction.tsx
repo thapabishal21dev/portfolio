@@ -9,10 +9,9 @@ const Introduction = () => {
 
 
   return (
-    <div  className=" flex justify-center">
+    <div  className=" flex justify-center mb-10 ">
       <div className=" flex flex-row w-3/5 ">
     <div className=" w-2/3">
-
     <div className=" flex flex-col mt-5">
     <h1 style={myFont.style} className="text-[48px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold">Hey, I&apos;m Bishal Thapa</h1>
     <div className=" flex flex-row items-center" >
