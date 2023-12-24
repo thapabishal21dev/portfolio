@@ -12,7 +12,7 @@ const About = () => {
   return <div  className=" flex justify-center">
     <div className="w-3/5">
     <div className=" flex flex-col mt-5">
-    <h1 style={myFont.style} className="text-[56px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold">Hey, I&apos;m Bishal Thapa</h1>
+    <h1 style={myFont.style} className="text-[56px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold">Hey, I&apos;m Bishal Thapa!</h1>
     <div className=" flex flex-row items-center" >
     <p style={myFont.style} className=" font-bold text-xl">Frontend Software Developer from Kathmandu,Nepal</p>
     <Image
