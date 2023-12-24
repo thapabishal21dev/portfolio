@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import localFont from "next/font/local"
-
 const myFont = localFont({src: "../../../fonts/BasierCircle-Bold.ttf"})
 
 const Introduction = () => {

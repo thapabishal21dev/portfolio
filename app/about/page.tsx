@@ -1,15 +1,13 @@
 "use client"
 import React from "react";
 import localFont from "next/font/local"
-import GitHubCalendar from "react-github-calendar";
+// import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
 import Link from "next/link";
-
 const myFont = localFont({src: "../../fonts/BasierCircle-Bold.ttf"})
 
 
 const About = () => {
-
   const thisYear = new Date()
   return <div  className=" flex justify-center">
     <div className="w-3/5">
@@ -40,12 +38,9 @@ const About = () => {
     </div>
     <div className=" my-6">
       <h1 className=" underline cursor-pointer text-center text-green-600"><Link href="https://github.com/thapabishal21tech" target="_blank">@thapabishal21tech on Github - {thisYear.getFullYear()}</Link></h1>
-      <GitHubCalendar  
+      {/* <GitHubCalendar  
  showWeekdayLabels={true} maxLevel={2} style={{margin:"10px auto "}} 
-  
-  
-
-   username="thapabishal21tech"/>
+   username="thapabishal21tech"/> */}
     </div>
     </div>
   </div>;
