@@ -27,7 +27,7 @@ const Introduction = () => {
     </div>
     <div className=" flex flex-col gap-4 text-[16px] mr-10 mt-10 ">
       <p>
-      As a professional software developer, I create amazing scalable web applications app to make the internet a better place. I am an advocate for a decentralized internet, with major interest in the FinTech and DeFi space. Enthusiast with experience in production level technologies.
+      Motivated Junior React Developer with expertise in HTML, CSS, JavaScript (ES6), and ReactJS. Dedicated to delivering high-quality, responsive user interfaces and enhancing functionality through API integration. A collaborative team player with a passion for innovative projects and a commitment to continuous skill enhancement in software development.
       </p>
     
     </div>
