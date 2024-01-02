@@ -1,77 +1,52 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
-import localFont from "next/font/local"
-const myFont = localFont({src: "../../../fonts/BasierCircle-Bold.ttf"})
+import BackgroundGradient from "@/app/background";
 
 const Introduction = () => {
-
-
   return (
-    <div  className=" flex justify-center mb-10 ">
-      <div className=" flex flex-row w-3/5 ">
-    <div className=" w-2/3">
-    <div className=" flex flex-col mt-5">
-    <h1 style={myFont.style} className="text-[48px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold">Hey, I&apos;m Bishal Thapa</h1>
-    <div className=" flex flex-row items-center" >
-    <p style={myFont.style} className=" font-bold text-xl">Frontend Software Developer from Kathmandu,Nepal</p>
-    <Image
-              className=" rounded-full w-8"
-              src="/nepalflag.svg"
-              width={200}
-              height={200}
-              alt="avatar"
-            />
-    </div>
-    
-    </div>
-    <div className=" flex flex-col gap-4 text-[16px] mr-10 mt-10 ">
-      <p>
-      Motivated Junior React Developer with expertise in HTML, CSS, JavaScript (ES6), and ReactJS. Dedicated to delivering high-quality, responsive user interfaces and enhancing functionality through API integration. A collaborative team player with a passion for innovative projects and a commitment to continuous skill enhancement in software development.
-      </p>
-    
-    </div>
-      {/* <div className="  flex w-3/5 bg-slate-300 w-50% ">
-      <div className=" flex flex-col mt-5">
-    <h1 style={myFont.style} className="text-[56px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold">Hey, I&apos;m Bishal Thapa</h1>
-    <div className=" flex flex-row items-center" >
-    <p style={myFont.style} className=" font-bold text-xl">Frontend Software Developer from Kathmandu,Nepal</p>
-    <Image
-              className=" rounded-full w-8"
-              src="/nepalflag.svg"
-              width={200}
-              height={200}
-              alt="avatar"
-            />
-    </div>
-    
-    </div>
-    <div className=" text-justify flex flex-col gap-4 text-[16px] mt-10 ">
-      <p>
-      As a professional software developer, I create amazing scalable web applications app to make the internet a better place. I am an advocate for a decentralized internet, with major interest in the FinTech and DeFi space. Enthusiast with experience in production level technologies.
-      </p>
-    </div>
-        <div className=" w-50% flex justify-center">
-          <Image
-            className=" text-center w-4/5"
-            src="/portfolio.jpg"
-            width={1000}
-            height={1000}
-            alt="avatar"
-          />
+    <div className="relative z-10 ">
+      <div className="absolute w-full h-screen">
+        <BackgroundGradient />
+      </div>
+      <div className=" flex justify-center">
+        <div className="relative w-4/6 flex z-50 justify-center border-blur max-h-screen py-28">
+          <div className="flex flex-row">
+            <div className="">
+              <div className="flex flex-col mt-5 gap-12">
+                <h1 className="text-7xl bg-gradient-to-r from-[#777777] to-[#003cff]  inline-block text-transparent bg-clip-text font-extrabold ">
+                  BISHAL THAPA
+                </h1>
+                <div className="flex flex-row items-center">
+                  <p className=" text-5xl font-bold text-slate-700">
+                    Frontend Software Developer
+                    <span className=" flex my-4 flex-row">
+                      Kathmandu,Nepal
+                      <Image
+                        className="rounded-full w-12"
+                        src="/nepalflag.svg"
+                        width={200}
+                        height={200}
+                        alt="avatar"
+                      />
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col font-medium text-[16px] text-black mt-10">
+                <p>
+                  Motivated Junior React Developer with expertise in HTML, CSS,
+                  JavaScript (ES6), and ReactJS. Dedicated to delivering
+                  high-quality, responsive user interfaces and enhancing
+                  functionality through API integration. A collaborative team
+                  player with a passion for innovative projects and a commitment
+                  to continuous skill enhancement in software development.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div> */}
-    </div>
-    <div className=" w-1/3">
-    <Image
-            className=" text-center "
-            src="/portfolio.jpg"
-            width={1000}
-            height={1000}
-            alt="avatar"
-          />
-    </div>
-    </div>
+      </div>
     </div>
   );
 };

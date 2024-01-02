@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 
 .dark {
@@ -20,6 +21,7 @@ body {
   transition: background-color 0.3s, color 0.3s; */
   /* background-color: #e6e6e6; */
   /* background-color: #F7F7FC; */
-  font-family: "Poppins", sans-serif;
+  font-family: 'Fira Code', monospace;
+
 
 }
