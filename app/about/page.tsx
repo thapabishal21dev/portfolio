@@ -15,6 +15,7 @@ const About = (props: IpropsIntro) => {
         subIntro="Frontend Software Developer from Kathmandu,Nepal"
         image={"/nepalflag.svg"}
         heading=""
+        emojHand="👋"
       />
     </>
   );

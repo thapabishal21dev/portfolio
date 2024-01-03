@@ -1,40 +1,38 @@
 "use client";
 import React, { useState } from "react";
 import localFont from "next/font/local";
-import GitHubCalendar from "react-github-calendar";
 import Image from "next/image";
 import Link from "next/link";
 const myFont = localFont({ src: "../../fonts/BasierCircle-Bold.ttf" });
 import { useEffect } from "react";
+import { AnyARecord } from "dns";
 
 interface IpropsIntro {
   intro: string;
   subIntro: string;
   image: any;
   heading: string;
+  emojHand: string;
 }
 
 const AboutUs = (props: IpropsIntro) => {
-  const thisYear = new Date();
-  const [isClient, setIsClient] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   return (
-    <div className=" flex justify-center h-screen bg-blue-300 absolute overflow-y-hidden">
+    <div className=" flex justify-center h-auto overflow-hidden mt-16">
       <div className="w-4/6">
         <div className=" flex flex-col mt-2">
-          <h1 className=" text-center font-extrabold text-5xl text-[#757575]">
+          <h1 className=" text-center  font-extrabold text-5xl text-[#757575]">
             {props.heading}
           </h1>
-          <h1
-            style={myFont.style}
-            className="text-[56px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold"
-          >
-            {props.intro}
-          </h1>
+          <div className="flex flex-row items-center ">
+            <p className=" text-4xl">{props.emojHand}</p>
+            <h1
+              style={myFont.style}
+              className="text-[56px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold"
+            >
+              {" "}
+              {props.intro}
+            </h1>
+          </div>
           <div className=" flex flex-row items-center">
             <p style={myFont.style} className=" font-bold text-xl">
               {props.subIntro}
@@ -70,21 +68,6 @@ const AboutUs = (props: IpropsIntro) => {
             GitcoinDAO and I love to read fiction and non-fiction books, watch
             sci-fi movies and play games on my playstation console.
           </p>
-        </div>
-        <div className=" my-6">
-          <h1 className=" underline cursor-pointer text-center text-green-600">
-            <Link href="https://github.com/thapabishal21tech" target="_blank">
-              @thapabishal21tech on Github - {thisYear.getFullYear()}
-            </Link>
-          </h1>
-          {isClient && (
-            <GitHubCalendar
-              showWeekdayLabels={true}
-              maxLevel={2}
-              style={{ margin: "10px auto " }}
-              username="thapabishal21tech"
-            />
-          )}
         </div>
       </div>
     </div>

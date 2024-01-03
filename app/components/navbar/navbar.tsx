@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaSun } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa";
 
@@ -12,9 +12,28 @@ const Navbar = () => {
     setIsToggled(!isToggled);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.getElementById("navbar");
+      const isScrolled = window.scrollY > 500;
+
+      navbar.classList.toggle("translate-y-[-100%]", isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Run the effect only once on component mount
+
   return (
-    <div className=" flex justify-center ">
-      <div className="fixed rounded-xl top-0 mt-10 w-4/6 z-50 bg-slate-400 bg-opacity-40 backdrop-blur-[10px]">
+    <div
+      id="navbar"
+      className=" flex justify-center transition-transform duration-300 ease-in-out "
+    >
+      <div className="fixed rounded-xl top-0 mt-2 w-4/6 z-50 bg-slate-400 bg-opacity-40 backdrop-blur-[10px]">
         <div className=" px-12 sm:block hidden">
           <ul className=" gap-8 min-[640px]:flex font-medium items-center">
             <Link href="/">

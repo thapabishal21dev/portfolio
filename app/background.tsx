@@ -2,7 +2,7 @@ import React from "react";
 
 const BackgroundGradient = () => {
   return (
-    <div className="h-screen bg-slate-200 w-full max-h-screen opacity-60 overflow-hidden">
+    <div className="h-screen w-full max-h-screen opacity-40 overflow-hidden">
       <div id="bg-wrap">
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <defs>
@@ -37,8 +37,8 @@ const BackgroundGradient = () => {
                 values="0%;3%;0%"
                 repeatCount="indefinite"
               ></animate>
-              <stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop>
-              <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
+              <stop offset="0%" stop-color="rgba(212, 212, 212, 1)"></stop>
+              <stop offset="100%" stop-color="rgba(128, 128, 128, 0)"></stop>
             </radialGradient>
             <radialGradient
               id="Gradient3"
