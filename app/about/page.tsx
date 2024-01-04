@@ -5,6 +5,8 @@ interface IpropsIntro {
   intro: string;
   subIntro: string;
   image: any;
+  heading: string;
+  emojHand: string;
 }
 
 const About = (props: IpropsIntro) => {

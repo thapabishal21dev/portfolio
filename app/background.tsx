@@ -2,7 +2,7 @@ import React from "react";
 
 const BackgroundGradient = () => {
   return (
-    <div className="h-screen w-full max-h-screen opacity-40 overflow-hidden">
+    <div className="h-screen w-full dark:opacity-0 max-h-screen opacity-40 overflow-hidden">
       <div id="bg-wrap">
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <defs>

@@ -5,7 +5,7 @@ import BackgroundGradient from "@/app/background";
 
 const Introduction = () => {
   return (
-    <div className="relative z-10 ">
+    <div className="relative z-10 dark:bg-black h-screen transition-all duration-500 ease-out delay-0 ">
       <div className="absolute w-full h-screen">
         <BackgroundGradient />
       </div>
@@ -14,14 +14,16 @@ const Introduction = () => {
           <div className="flex flex-row">
             <div className="">
               <div className="flex flex-col mt-5 gap-12">
-                <h1 className="text-7xl bg-gradient-to-r from-[#777777] to-[#003cff]  inline-block text-transparent bg-clip-text font-extrabold ">
+                <h1 className=" dark:bg-gradient-to-r from-[#00ffee] to-[#001eff] text-7xl bg-gradient-to-r from-[#777777] to-[#003cff]  inline-block text-transparent bg-clip-text font-extrabold ">
                   BISHAL THAPA
                 </h1>
                 <div className="flex flex-row items-center">
-                  <p className=" text-5xl font-bold text-slate-700">
-                    Frontend Software Developer
-                    <span className=" flex my-4 flex-row">
-                      Kathmandu,Nepal
+                  <p className="dark:text from-[#00ffee] to-[#001eff] text-5xl font-bold text-slate-700">
+                    <span className="bg-clip-text dark:text-transparent bg-gradient-to-r from-[#00ffee] to-[#001eff]">
+                      Frontend Software Developer
+                    </span>
+                    <span className="flex my-4 flex-row dark:bg-clip-text text-transparent bg-gradient-to-r from-[#00ffee] to-[#001eff]">
+                      Kathmandu, Nepal apply
                       <Image
                         className="rounded-full w-12"
                         src="/nepalflag.svg"
@@ -33,7 +35,7 @@ const Introduction = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col font-medium text-[16px] text-black mt-10">
+              <div className="flex dark:text-white flex-col font-medium text-[16px] text-black mt-10">
                 <p>
                   Motivated Junior React Developer with expertise in HTML, CSS,
                   JavaScript (ES6), and ReactJS. Dedicated to delivering
