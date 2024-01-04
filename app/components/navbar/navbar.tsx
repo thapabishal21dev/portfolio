@@ -11,17 +11,17 @@ interface INavbarElement {
 }
 
 const Navbar = () => {
-  const [isClicked, setIsClicked] = useState(true);
+  const [isClicked, setIsClicked] = useState(false);
 
   const toggleDarkMode = () => {
     setIsClicked(!isClicked);
 
-    if (localStorage.theme === "dark") {
-      document.documentElement.classList.add("dark");
-      localStorage.removeItem("theme");
-    } else {
-      document.documentElement.classList.remove("dark");
+    if (!isClicked) {
       localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.removeItem("theme");
+      document.documentElement.classList.remove("dark");
     }
   };
 
