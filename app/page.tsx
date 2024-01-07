@@ -11,8 +11,8 @@ export default function Home() {
     AOS.init({});
   }, []);
   return (
-    <div className="">
-      <div>
+    <div>
+      <div className="">
         <Introduction />
         <AboutUs intro={``} subIntro={``} image={""} heading="" emojHand="" />
         <Github />

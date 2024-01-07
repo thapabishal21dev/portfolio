@@ -43,12 +43,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div id="navbar" className=" flex justify-center w-screen mx-auto">
-      <div className="fixed rounded-xl top-2 mt-2 z-50 bg-slate-400 backdrop-blur-[6px] dark:backdrop-blur-[6px] dark:bg-gray-800 dark:bg-opacity-90 border-1 bg-opacity-40 transition-all duration-500 ease-out delay-0">
-        <div className=" px-12 sm:block hidden ">
-          <ul className=" text-[16px] text-black gap-8 h-[54px] dark:text-slate-400 min-[640px]:flex font-medium items-center">
-            <Link href="/">
-              <li className=" text-xl rounded-xl p-2">
+    <>
+      <div id="navbar" className=" flex justify-center w-screen ">
+        <nav className=" fixed top-2 mt-2 z-50  w-[780px] rounded-xl bg-slate-400 dark:bg-gray-800 h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-60">
+          <ul className=" text-[16px] text-black gap-8 dark:text-slate-500 flex font-medium items-center">
+            <li className=" text-xl rounded-xl p-2">
+              <Link href="/">
                 <Image
                   className="rounded-full w-10"
                   src="/avatar.png"
@@ -56,31 +56,22 @@ const Navbar = () => {
                   height={200}
                   alt="avatar"
                 />
-              </li>
-            </Link>
-            <Link href="/about">
-              <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
-                About
-              </li>
-            </Link>
-            <Link href="/projects">
-              <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
-                Projects
-              </li>
-            </Link>
-            <Link href="/technology">
-              <li className=" hover:text-slate-600 dark:hover:text-slate-300  p-2">
-                Technology
-              </li>
-            </Link>
-            <Link href="/blog">
-              <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
-                Blog
-              </li>
-            </Link>
-
+              </Link>
+            </li>
+            <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
+              <Link href="/about">About</Link>
+            </li>
+            <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
+              <Link href="/projects">Projects</Link>
+            </li>
+            <li className=" hover:text-slate-600 dark:hover:text-slate-300  p-2">
+              <Link href="/technology">Technology</Link>
+            </li>
+            <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
+              <Link href="/blog">Blog</Link>
+            </li>
             <button
-              className="  bg-slate-400 ml-12 w-30 bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
+              className="  bg-slate-800 mx-4 w-30 bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
               onClick={toggleDarkMode}
             >
               {isClicked ? (
@@ -98,10 +89,13 @@ const Navbar = () => {
               )}
             </button>
           </ul>
-        </div>
+        </nav>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Navbar;
+
+// <nav className=" fixed top-2 mt-2 z-50  w-[780px] bg-slate-400 h-14 backdrop-blur-[6px] dark:backdrop-blur-[6px]  dark:bg-opacity-90 border-1 bg-opacity-40  transition-all duration-500 ease-out delay-0">
+//           <ul className=" text-[16px]  text-black gap-8  dark:text-slate-500 dark:bg-gray-800 min-[640px]:flex font-medium items-center"></ul>

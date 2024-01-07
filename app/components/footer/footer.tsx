@@ -11,7 +11,7 @@ const Footer = () => {
         <Link href="https://github.com/thapabishal21tech" target="_blank">
           <Image
             className=" rounded-full w-8 hover:scale-110 transition duration-500"
-            src="/github.svg"
+            src="/linkedin.svg"
             width={200}
             height={200}
             alt="avatar"

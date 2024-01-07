@@ -1,11 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import localFont from "next/font/local";
 import Image from "next/image";
-import Link from "next/link";
-const myFont = localFont({ src: "../../fonts/BasierCircle-Bold.ttf" });
-import { useEffect } from "react";
-import { AnyARecord } from "dns";
 
 interface IpropsIntro {
   intro: string;
@@ -17,26 +12,21 @@ interface IpropsIntro {
 
 const AboutUs = (props: IpropsIntro) => {
   return (
-    <div className=" flex justify-center h-auto overflow-hidden mt-16">
-      <div className="w-4/6">
+    <div className=" flex justify-center w-screen pt-28 dark:bg-slate-900 text-black dark:text-white">
+      <div className=" max-w-[780px]  ">
         <div className=" flex flex-col mt-2">
           <h1 className=" text-center  font-extrabold text-5xl text-[#757575]">
             {props.heading}
           </h1>
           <div className="flex flex-row items-center ">
             <p className=" text-4xl">{props.emojHand}</p>
-            <h1
-              style={myFont.style}
-              className="text-[56px] bg-gradient-to-r from-[#00baff] to-[#063ef9] inline-block text-transparent bg-clip-text font-extrabold"
-            >
+            <h1 className="text-[56px] bg-gradient-to-r from-[#00c8ff] to-[#00ff80] inline-block text-transparent bg-clip-text font-extrabold">
               {" "}
               {props.intro}
             </h1>
           </div>
           <div className=" flex flex-row items-center">
-            <p style={myFont.style} className=" font-bold text-xl">
-              {props.subIntro}
-            </p>
+            <p className=" font-bold text-xl">{props.subIntro}</p>
             <Image
               className=" rounded-full w-8"
               src={props.image}
