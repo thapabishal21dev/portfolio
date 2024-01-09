@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import "./globals.css";
@@ -9,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "thapabishal portfolio",
   description: "Developed by bishal thapa",
-  keywords: ["Developer", "Portfolio", "Developer Portflio", "bishal thapa"],
+  keywords: ["Developer", "Portfolio", "Developer Portfolio", "bishal thapa"],
 };
 
 export default function RootLayout({
@@ -18,7 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="dark">
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
+      </Head>
       <body className={`${inter.className}  `}>
         <Navbar />
         {children}

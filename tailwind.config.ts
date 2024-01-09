@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,9 +11,9 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        PermanentMarker: ["Permanent Marker", "cursive"],
       },
     
     },
@@ -21,5 +22,6 @@ const config: Config = {
     require("@tailwindcss/forms"),
     require('tailwindcss-animated')
   ],
+  
 }
 export default config
