@@ -1,10 +1,10 @@
 import React from "react";
-import BackgroundGradient from "../background";
+import ProjectPage from "../components/projects/Project";
 
 const Projects = () => {
   return (
     <div>
-      <BackgroundGradient />
+      <ProjectPage />
     </div>
   );
 };

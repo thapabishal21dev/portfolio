@@ -12,9 +12,9 @@ interface IpropsIntro {
 
 const AboutUs = (props: IpropsIntro) => {
   return (
-    <div className=" flex justify-center w-screen pt-28 dark:bg-slate-900 text-black dark:text-white">
-      <div className=" max-w-[780px]  ">
-        <div className=" flex flex-col mt-2">
+    <div className=" flex justify-center w-screen pt-24 dark:bg-slate-900 text-black dark:text-white">
+      <div className=" max-w-[780px] ">
+        <div className=" flex flex-col">
           <h1 className=" text-center  font-extrabold text-5xl text-[#757575]">
             {props.heading}
           </h1>
@@ -36,7 +36,7 @@ const AboutUs = (props: IpropsIntro) => {
             />
           </div>
         </div>
-        <div className=" text-justify flex flex-col gap-4 text-[16px] mt-4 ">
+        <div className=" text-justify flex flex-col gap-4 text-[16px]">
           <p>
             As a professional software developer, I create amazing scalable web
             applications app to make the internet a better place. I am an

@@ -10,29 +10,33 @@ import { IoPersonSharp } from "react-icons/io5";
 const Introduction = () => {
   return (
     <>
-      <div className=" relative  z-10 h-screen  flex justify-center dark:bg-[#000a1f] ">
+      <div className=" relative text-black dark:text-white  z-10 flex justify-center dark:bg-[#000a1f] ">
         <div className=" mt-20 w-screen max-w-[780px] ">
           <div className="flex flex-col justify-between  ">
             <div className=" flex flex-row mt-12 justify-between">
-              <div>
-                <h1 className=" text-5xl bg-gradient-to-r from-[#777777] to-[#003cff]  inline-block text-transparent bg-clip-text font-extrabold ">
-                  BISHAL THAPA
-                </h1>
-                <p className="dark:text mt-2 from-[#00ffee] to-[#001eff] text-3xl font-bold text-slate-700">
-                  <span className="bg-clip-text dark:text-transparent bg-gradient-to-r from-[#00ffee] to-[#001eff]">
-                    Frontend Software Developer
-                  </span>
-                  <div className="  flex flex-row items-center">
-                    <span className="flex flex-row ">Kathmandu, Nepal</span>
+              <div className=" flex flex-col">
+                <div>
+                  <h1 className=" text-5xl bg-gradient-to-r from-[#777777] to-[#003cff]  inline-block text-transparent bg-clip-text font-extrabold ">
+                    BISHAL THAPA
+                  </h1>
+                </div>
+                <div className="">
+                  <h1 className="dark:text mt-2 from-[#00ffee] to-[#001eff] text-3xl font-bold text-slate-700">
+                    <span className="bg-clip-text dark:text-transparent bg-gradient-to-r from-[#00ffee] to-[#001eff]">
+                      Frontend Software Developer
+                    </span>{" "}
+                  </h1>{" "}
+                  <div className=" flex flex-row items-center text-2xl text-neutral-700 font-bold dark:text-white">
+                    <span>Kathmandu, Nepal</span>
                     <Image
                       className="rounded-full w-8"
                       src="/nepalflag.svg"
                       width={200}
                       height={200}
                       alt="avatar"
-                    />
+                    />{" "}
                   </div>
-                </p>
+                </div>
               </div>
               <div className=" flex ">
                 <Image
@@ -140,10 +144,6 @@ export default Introduction;
 
 
 -----------------------------
-
-
-             
-
 
 */
 }

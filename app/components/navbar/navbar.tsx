@@ -45,8 +45,8 @@ const Navbar = () => {
   return (
     <>
       <div id="navbar" className=" flex  justify-center w-screen ">
-        <nav className=" fixed border-2 border-slate-200 dark:border-slate-700 top-2 mt-2 z-50  w-[780px] rounded-xl bg-[#e3edfe] dark:bg-gray-800  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-60">
-          <ul className=" text-[16px] text-black gap-8 dark:text-slate-500 flex font-medium items-center">
+        <nav className=" fixed border-2 border-slate-200 dark:border-slate-700 top-2 mt-2 z-50  w-[780px] rounded-xl bg-[#e3edfe] dark:bg-slate-800  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
+          <ul className=" text-[16px] text-black gap-8 dark:text-slate-300 flex font-medium items-center">
             <li className=" text-xl rounded-xl p-2">
               <Link href="/">
                 <Image
@@ -58,16 +58,16 @@ const Navbar = () => {
                 />
               </Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
+            <li className=" hover:text-slate-600 dark:hover:text-slate-400 p-2">
               <Link href="/about">About</Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
+            <li className=" hover:text-slate-600 dark:hover:text-slate-400 p-2">
               <Link href="/projects">Projects</Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-300  p-2">
+            <li className=" hover:text-slate-600 dark:hover:text-slate-400  p-2">
               <Link href="/technology">Technology</Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-300 p-2">
+            <li className=" hover:text-slate-600 dark:hover:text-slate-400 p-2">
               <Link href="/blog">Blog</Link>
             </li>
             <button
