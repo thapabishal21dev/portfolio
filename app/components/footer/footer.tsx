@@ -10,9 +10,8 @@ const Footer = () => {
 
   return (
     <>
-      {" "}
-      <div className=" bg-centre bg-[url('/wallpaper.png')] ">
-        <div className="flex dark:bg-slate-900 justify-center text-white">
+      <div className="  bg-centre bg-[url('/wallpaper.png')] ">
+        <div className="flex dark:bg-[#111040] justify-center text-white">
           <div className=" w-full max-w-[780px] mx-auto my-4 flex flex-col">
             <div className=" flex flex-row justify-between mt-10">
               <div>
@@ -121,24 +120,24 @@ const Footer = () => {
                     <ul className=" flex flex-row items-center gap-2">
                       <li>
                         <Image
-                          width={40}
-                          height={40}
+                          width={30}
+                          height={30}
                           alt="react"
                           src="/reactjs.svg"
                         />
                       </li>
                       <li>
                         <Image
-                          width={40}
-                          height={40}
+                          width={30}
+                          height={30}
                           alt="react"
                           src="/nextjs.svg"
                         />
                       </li>
                       <li>
                         <Image
-                          width={40}
-                          height={40}
+                          width={30}
+                          height={30}
                           alt="react"
                           src="/tailwindcss.svg"
                         />

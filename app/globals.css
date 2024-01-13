@@ -28,6 +28,11 @@ body {
 
 }
 
+*{
+  font-family: 'Fira Code', monospace;
+
+}
+
 
 @font-face { 
   font-family: "losevka"; 
