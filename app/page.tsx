@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <div className="">
         <Introduction />
-        <AboutUs intro={``} subIntro={``} image={""} heading="" emojHand="" />
+        <AboutUs />
         <Github />
         <Technology />
       </div>

@@ -1,15 +1,15 @@
 import SingleTech from "./singleTech";
 import Link from "next/link";
-import reactjs from "../../public/reactjs.svg";
-import javascript from "../../public/javascript.svg";
-import typescript from "../../public/typescript.svg";
-import redux from "../../public/redux.svg";
-import nextjs from "../../public/nextjs.svg";
-import tailwindcss from "../../public/tailwindcss.svg";
-import sass from "../../public/sass.svg";
-import github from "../../public/github.svg";
-import figma from "../../public/figma.svg";
-import git from "../../public/git.svg";
+import { FaReact } from "react-icons/fa";
+import { MdOutlineJavascript } from "react-icons/md";
+import { SiTypescript } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiSass } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiFigma } from "react-icons/si";
+import { SiGit } from "react-icons/si";
 
 const Technology = () => {
   return (
@@ -22,46 +22,46 @@ const Technology = () => {
         </div>
         <div className=" p-2 my-8 justify-items-center grid grid-cols-3 gap-10 ">
           <Link href="https://react.dev/" target="_blank">
-            <SingleTech name={"ReactJs"} image={reactjs} />
+            <SingleTech name={"ReactJs"} image={<FaReact />} />
           </Link>
           <Link
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             target="_blank"
           >
-            <SingleTech name={"JavaScript"} image={javascript} />
+            <SingleTech name={"JavaScript"} image={<MdOutlineJavascript />} />
           </Link>
           <Link href="https://www.typescriptlang.org/" target="_blank">
             {" "}
-            <SingleTech name={"TypeScript"} image={typescript} />
+            <SingleTech name={"TypeScript"} image={<SiTypescript />} />
           </Link>
           <Link href="https://redux-toolkit.js.org/" target="_blank">
             {" "}
-            <SingleTech name={"Redux"} image={redux} />
+            <SingleTech name={"Redux"} image={<SiRedux />} />
           </Link>
 
           <Link href="https://nextjs.org/" target="_blank">
             {" "}
-            <SingleTech name={"NextJs"} image={nextjs} />
+            <SingleTech name={"NextJs"} image={<SiNextdotjs />} />
           </Link>
           <Link href="https://tailwindcss.com/" target="_blank">
             {" "}
-            <SingleTech name={"TailwindCSS"} image={tailwindcss} />
+            <SingleTech name={"TailwindCSS"} image={<SiTailwindcss />} />
           </Link>
           <Link href="https://sass-lang.com/" target="_blank">
             {" "}
-            <SingleTech name={"SASS"} image={sass} />
+            <SingleTech name={"SASS"} image={<SiSass />} />
           </Link>
           <Link href="https://github.com/" target="_blank">
             {" "}
-            <SingleTech name={"GitHub"} image={github} />
+            <SingleTech name={"GitHub"} image={<SiGithub />} />
           </Link>
           <Link href="https://www.figma.com/" target="_blank">
             {" "}
-            <SingleTech name={"Figma"} image={figma} />
+            <SingleTech name={"Figma"} image={<SiFigma />} />
           </Link>
           <Link href="https://git-scm.com/" target="_blank">
             {" "}
-            <SingleTech name={"Git"} image={git} />
+            <SingleTech name={"Git"} image={<SiGit />} />
           </Link>
         </div>
       </div>

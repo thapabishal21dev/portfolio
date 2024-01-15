@@ -10,7 +10,7 @@ import { IoPersonSharp } from "react-icons/io5";
 const Introduction = () => {
   return (
     <>
-      <div className=" relative text-black dark:text-white  z-10 flex justify-center dark:bg-[#000a1f] ">
+      <div className=" relative text-black dark:text-white  z-10 flex justify-center ">
         <div className=" mt-20 w-screen max-w-[780px] ">
           <div className="flex flex-col justify-between  ">
             <div className=" flex flex-row mt-12 justify-between">
@@ -38,9 +38,9 @@ const Introduction = () => {
                   </div>
                 </div>
               </div>
-              <div className=" flex ">
+              <div className=" flex  ">
                 <Image
-                  className=" rounded-[50%] h-[150px] w-[150px]"
+                  className=" rounded-[50%] h-[150px] w-[150px] shadow-[rgba(0,_0,_0,_0.5)_0px_10px_10px]"
                   src="/portfolio.jpg"
                   width={200}
                   height={200}
@@ -73,20 +73,20 @@ const Introduction = () => {
                   <a
                     href="https://github.com/thapabishal21tech"
                     target="_blank"
-                    className="hover:bg-slate-200 p-2 rounded-md dark:hover:bg-slate-800"
+                    className="hover:bg-slate-200 p-1 rounded-md dark:hover:bg-slate-800"
                   >
                     {" "}
-                    <p className=" text-[28px] dark:text-white">
+                    <p className=" text-[24px] dark:text-white">
                       <FaGithub />
                     </p>
                   </a>
                   <a
                     href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
                     target="_blank"
-                    className="hover:bg-slate-200 p-2 rounded-md dark:hover:bg-slate-800"
+                    className="hover:bg-slate-200 p-1 rounded-md dark:hover:bg-slate-800"
                   >
                     {" "}
-                    <p className="  text-[28px] dark:text-white">
+                    <p className="  text-[24px] dark:text-white">
                       <FaLinkedin />
                     </p>
                   </a>
@@ -94,20 +94,20 @@ const Introduction = () => {
                   <a
                     href="https://twitter.com/"
                     target="_blank"
-                    className="hover:bg-slate-200 p-2 rounded-md dark:hover:bg-slate-800"
+                    className="hover:bg-slate-200 p-1 rounded-md dark:hover:bg-slate-800"
                   >
                     {" "}
-                    <p className="  text-[28px] dark:text-white">
+                    <p className="  text-[24px] dark:text-white">
                       <FaXTwitter />
                     </p>
                   </a>
                   <a
                     href="mailto:thapabishal21sinha@gmail.com"
                     target="_blank"
-                    className="hover:bg-slate-200 p-2 rounded-md dark:hover:bg-slate-800"
+                    className="hover:bg-slate-200 p-1 rounded-md dark:hover:bg-slate-800"
                   >
                     {" "}
-                    <p className=" text-[28px] dark:text-white">
+                    <p className=" text-[24px] dark:text-white">
                       <MdEmail />
                     </p>
                   </a>

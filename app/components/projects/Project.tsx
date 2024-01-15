@@ -29,12 +29,13 @@ const ProjectPage = () => {
 
   return (
     <>
-      <div className=" pt-16 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-950 to-black flex justify-center">
+      {" "}
+      <div className=" pt-16  transition-opacity ease-in-out duration-600 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-950 to-black flex justify-center">
         <div className=" flex flex-col gap-24 w-[780px]   dark:text-white  pt-12  justify-center my-16 ">
           <ListProject />
           <ListProject />
           <ListProject />
-          <div className=" text-lg font-bold hover:cursor-pointer flex items-center mx-10">
+          <div className=" text-lg hover:cursor-pointer flex items-center mx-10">
             <a
               className=" hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1"
               href="https://github.com/thapabishal21tech"

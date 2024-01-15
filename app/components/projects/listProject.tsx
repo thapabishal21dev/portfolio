@@ -25,7 +25,7 @@ const ListProject = () => {
               target="_blank"
             >
               <Image
-                className=" rounded-lg "
+                className="  h-full w-full "
                 width={700}
                 height={700}
                 src={"/project-portfolio.png"}
@@ -46,27 +46,6 @@ const ListProject = () => {
                   visit project
                 </button>
               </Link>
-            </div>
-            <div className=" flex flex-row items-center  gap-2 my-2">
-              {" "}
-              <Link href="https://github.com/thapabishal21tech/thapabishal21tech">
-                <span className=" flex flex-row items-center font-semibold  hover:cursor-pointer  text-lg hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1 ">
-                  portfolio.vercel.app
-                  <FiArrowUpRight />
-                </span>
-              </Link>
-              <div>
-                <a
-                  href="https://github.com/thapabishal21tech/thapabishal21tech"
-                  target="_blank"
-                >
-                  <span className=" flex gap-2 flex-row items-center font-semibold  hover:cursor-pointer  text-lg hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1 ">
-                    <FaGithub />
-                    portfolio.github
-                    <FiArrowUpRight />
-                  </span>
-                </a>
-              </div>
             </div>
           </div>
         </div>

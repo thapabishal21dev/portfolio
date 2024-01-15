@@ -25,51 +25,50 @@ const Github = () => {
   };
 
   return (
-    <div className=" flex justify-center ">
-      <div className=" w-4/5 my-12 h-auto py-12 ">
-        <h1 className=" text-center font-bold text-gray-600 text-5xl ">
+    <div className=" flex justify-center dark:text-white ">
+      <div className=" w-[780px] my-12  ">
+        <h1 className=" text-center font-semibold text-2xl ">
           Github Contributions
         </h1>{" "}
         <div className=" mx-16 flex justify-center my-6 flex-row gap-4 ">
           <button
             onClick={() => handleChangeYear(2022)}
-            className=" hover:text-slate-600"
+            className=" hover:text-green-500 focus:outline-none focus:border-b-2 focus:border-green-300"
           >
             2022
           </button>
           <button
             onClick={() => handleChangeYear(2023)}
-            className=" hover:text-slate-600"
+            className=" hover:text-green-500 focus:outline-none focus:border-b-2 focus:border-green-300"
           >
             2023
           </button>
           <button
             onClick={() => handleChangeYear(2024)}
-            className=" hover:text-slate-600"
+            className=" hover:text-green-500 focus:outline-none focus:border-b-2 focus:border-green-300"
           >
             2024
           </button>
         </div>
-        <div className=" border-slate-400 py-4 bg-slate-100 rounded-md border-2 mx-2 ">
+        <div className=" border-slate-400 py-4 px-5  rounded-md border-2 mx-2 ">
           {isClient && (
             <GitHubCalendar
-              maxLevel={4}
-              style={{ margin: "10px auto " }}
+              style={{ margin: "6px auto " }}
               username="thapabishal21tech"
-              blockSize={14}
-              blockMargin={5}
-              fontSize={16}
+              blockSize={10}
+              blockMargin={3}
+              fontSize={14}
               colorScheme="dark"
               year={selectedYear}
             />
           )}
         </div>
-        <h1 className="my-6 text-lg italic underline cursor-pointer text-center text-green-500">
+        <h1 className="my-6 text-md italic  underline cursor-pointer text-center text-green-500">
           <Link href="https://github.com/thapabishal21tech" target="_blank">
             thapabishal21tech on Github - {thisYear.getFullYear()}
           </Link>
         </h1>
-        <h1 className=" text-center ">
+        <h1 className=" text-center text-md ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quos
           tempore perspiciatis aperiam amet nobis iure possimus eligendi
           expedita doloribus Lorem ipsum dolor sit amet consectetur adipisicing
