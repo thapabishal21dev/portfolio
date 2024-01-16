@@ -1,10 +1,10 @@
 "use client";
-import AboutUs from "./about";
+import AboutPage from "../pages/about";
 
 const About = () => {
   return (
     <>
-      <AboutUs />
+      <AboutPage />
     </>
   );
 };

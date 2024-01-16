@@ -14,7 +14,7 @@ import { SiGit } from "react-icons/si";
 const Technology = () => {
   return (
     <div className="flex h-auto justify-center mt-20 overflow-hidden">
-      <div className=" w-2/5">
+      <div className=" w-[780px] px-28 dark:text-white ">
         <div>
           <h1 className=" text-center text-transparent text-5xl font-extrabold bg-clip-text bg-gradient-to-r from-yellow-200 to-red-500">
             Tech Stack

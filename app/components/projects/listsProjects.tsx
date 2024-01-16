@@ -1,23 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
-import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
-const ListProject = () => {
-  const styles = {
-    main: {
-      backgroundColor: "#f1f1f1",
-      width: "100%",
-    },
-    inputText: {
-      padding: "10px",
-      color: "red",
-    },
-  };
+interface Iprops {
+  params: string;
+}
+
+const ListProjects = ({ params }: Iprops) => {
   return (
     <>
-      <div className="mx-10 min-h-56 border-t-2 border-l-2 rounded-xl border-gray-400 hover:shadow-[6px_6px_0px_0px_rgba(100,100,200)] hover:translate-x-[-5px] hover:translate-y-[-5px] transition ease-in-out shadow-[6px_6px_0px_0px_rgba(0,0,0)] dark:shadow-[6px_6px_0px_0px_rgba(195,0,255)] h-fit dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255)]">
+      <div className=" min-h-56 border-t-2 border-l-2 rounded-xl border-gray-400 hover:shadow-[6px_6px_0px_0px_rgba(100,100,200)] hover:translate-x-[-5px] hover:translate-y-[-5px] transition ease-in-out shadow-[6px_6px_0px_0px_rgba(0,0,0)] dark:shadow-[6px_6px_0px_0px_rgba(195,0,255)] h-fit dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255)]">
         <div className="  px-6 py-6 h-fit flex flex-row gap-4">
           <div className="">
             <a
@@ -41,7 +33,8 @@ const ListProject = () => {
               Veniam, optio aperiam! Lorem ipsum
             </p>
             <div>
-              <Link href="/singleproject">
+              <Link href={`/projects/${params}`}>
+                {" "}
                 <button className=" dark:bg-violet-700 dark:hover:bg-violet-900 text-white px-3 py-1 rounded-md font-semibold bg-black dark:text-white hover:bg-slate-800">
                   visit project
                 </button>
@@ -54,4 +47,4 @@ const ListProject = () => {
   );
 };
 
-export default ListProject;
+export default ListProjects;

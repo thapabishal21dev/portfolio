@@ -11,7 +11,7 @@ const Introduction = () => {
   return (
     <>
       <div className=" relative text-black dark:text-white  z-10 flex justify-center ">
-        <div className=" mt-20 w-screen max-w-[780px] ">
+        <div className=" mt-20 w-[780px] ">
           <div className="flex flex-col justify-between  ">
             <div className=" flex flex-row mt-12 justify-between">
               <div className=" flex flex-col">

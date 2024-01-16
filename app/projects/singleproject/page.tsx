@@ -1,5 +1,6 @@
 import React from "react";
-import Singleproject from "../components/projects/singleProject";
+import Singleproject from "../../components/projects/singleProject";
+import { useRouter } from "next/router";
 
 const singleProjectpage = () => {
   return (

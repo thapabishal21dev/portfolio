@@ -12,7 +12,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { RiReactjsFill } from "react-icons/ri";
 import { SiVercel } from "react-icons/si";
 
-const Singleproject = () => {
+const SingleProject = () => {
   return (
     <>
       <div className=" dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-950 to-black flex justify-center dark:text-white">
@@ -117,4 +117,4 @@ const Singleproject = () => {
   );
 };
 
-export default Singleproject;
+export default SingleProject;
