@@ -4,8 +4,8 @@ const BlogPage = () => {
   return (
     <>
       <div className=" pt-32 flex justify-center">
-        <div className=" w-[780px]">
-          <h1>this is blog page </h1>
+        <div className=" w-[780px] h-screen flex justify-centre dark:text-white">
+          <h1 className=" text-xl">Working... </h1>
         </div>
       </div>
     </>

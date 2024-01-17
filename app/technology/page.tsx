@@ -1,69 +1,77 @@
-import SingleTech from "./singleTech";
-import Link from "next/link";
-import { FaReact } from "react-icons/fa";
-import { MdOutlineJavascript } from "react-icons/md";
-import { SiTypescript } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiSass } from "react-icons/si";
-import { SiGithub } from "react-icons/si";
-import { SiFigma } from "react-icons/si";
-import { SiGit } from "react-icons/si";
+import { IconsList } from "../lib/icons";
+import Techstack from "../components/techstack";
 
 const Technology = () => {
   return (
     <div className="flex h-auto justify-center mt-20 overflow-hidden">
-      <div className=" w-[780px] px-28 dark:text-white ">
-        <div>
-          <h1 className=" text-center text-transparent text-5xl font-extrabold bg-clip-text bg-gradient-to-r from-yellow-200 to-red-500">
-            Tech Stack
+      <div className=" w-[780px] h-screen dark:text-white ">
+        <div className=" mt-14">
+          <h1 className="text-xl py-5 bg-gradient-to-r from-[#00c8ff] to-[#00ff80] inline-block text-transparent bg-clip-text font-bold">
+            Skills
           </h1>
         </div>
-        <div className=" p-2 my-8 justify-items-center grid grid-cols-3 gap-10 ">
-          <Link href="https://react.dev/" target="_blank">
-            <SingleTech name={"ReactJs"} image={<FaReact />} />
-          </Link>
-          <Link
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-            target="_blank"
-          >
-            <SingleTech name={"JavaScript"} image={<MdOutlineJavascript />} />
-          </Link>
-          <Link href="https://www.typescriptlang.org/" target="_blank">
-            {" "}
-            <SingleTech name={"TypeScript"} image={<SiTypescript />} />
-          </Link>
-          <Link href="https://redux-toolkit.js.org/" target="_blank">
-            {" "}
-            <SingleTech name={"Redux"} image={<SiRedux />} />
-          </Link>
-
-          <Link href="https://nextjs.org/" target="_blank">
-            {" "}
-            <SingleTech name={"NextJs"} image={<SiNextdotjs />} />
-          </Link>
-          <Link href="https://tailwindcss.com/" target="_blank">
-            {" "}
-            <SingleTech name={"TailwindCSS"} image={<SiTailwindcss />} />
-          </Link>
-          <Link href="https://sass-lang.com/" target="_blank">
-            {" "}
-            <SingleTech name={"SASS"} image={<SiSass />} />
-          </Link>
-          <Link href="https://github.com/" target="_blank">
-            {" "}
-            <SingleTech name={"GitHub"} image={<SiGithub />} />
-          </Link>
-          <Link href="https://www.figma.com/" target="_blank">
-            {" "}
-            <SingleTech name={"Figma"} image={<SiFigma />} />
-          </Link>
-          <Link href="https://git-scm.com/" target="_blank">
-            {" "}
-            <SingleTech name={"Git"} image={<SiGit />} />
-          </Link>
-        </div>
+        <div className="  flex flex-row flex-wrap gap-4 py-4 ">
+          <Techstack
+            techName={"TypeScript"}
+            techImg={<IconsList.typescriptIcon />}
+            HoverBorderColor="hover:border-blue-400"
+            hoverBgColor="hover:bg-blue-200"
+          />
+          <Techstack
+            techName={"ReactJs"}
+            techImg={<IconsList.reactIcon />}
+            HoverBorderColor="hover:border-cyan-400"
+            hoverBgColor="hover:bg-cyan-200"
+          />
+          <Techstack
+            techName={"NextJs"}
+            techImg={<IconsList.nextjsIcon />}
+            HoverBorderColor="hover:border-blue-400"
+            hoverBgColor="hover:bg-blue-200"
+          />
+          <Techstack
+            techName={"TailwindCSS"}
+            techImg={<IconsList.tailwindcssIcon />}
+            HoverBorderColor="hover:border-blue-400"
+            hoverBgColor="hover:bg-blue-200"
+          />
+          <Techstack
+            techName="JavaScript"
+            techImg={<IconsList.javascriptIcon />}
+            HoverBorderColor="hover:border-[#F0DB4F]"
+            hoverBgColor="hover:bg-[#F0DB4F]"
+          />
+          <Techstack
+            techName="Redux"
+            techImg={<IconsList.reduxIcon />}
+            HoverBorderColor="hover:border-[#764abc]"
+            hoverBgColor="hover:bg-[#764abc]"
+          />
+          <Techstack
+            techName="SASS"
+            techImg={<IconsList.sassIcon />}
+            HoverBorderColor="hover:border-[#cc6699]"
+            hoverBgColor="hover:bg-[#cc6699]"
+          />
+          <Techstack
+            techName="GitHub"
+            techImg={<IconsList.githubIcon />}
+            HoverBorderColor="hover:border-slate-400"
+            hoverBgColor="hover:bg-slate-100"
+          />{" "}
+          <Techstack
+            techName="Figma"
+            techImg={<IconsList.figmaIcon />}
+            HoverBorderColor="hover:border-violet-400"
+            hoverBgColor="hover:bg-violet-200"
+          />
+          <Techstack
+            techName="Git"
+            techImg={<IconsList.gitIcon />}
+            HoverBorderColor="hover:border-[#f14e32]"
+            hoverBgColor="hover:bg-[#f14e32]"
+          />
+        </div>{" "}
       </div>
     </div>
   );

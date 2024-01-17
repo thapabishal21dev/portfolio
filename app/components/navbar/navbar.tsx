@@ -44,9 +44,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div id="navbar" className=" flex  justify-center w-screen ">
-        <nav className=" fixed border-2 border-slate-200 dark:border-slate-700 top-2 mt-2 z-50  w-[780px] rounded-xl bg-[#e3edfe] dark:bg-slate-800  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
-          <ul className=" text-[16px] text-black gap-8 dark:text-slate-300 flex font-medium items-center">
+      <div id="navbar" className=" flex  justify-center ">
+        <nav className=" fixed border-2 border-slate-200 dark:border-slate-700 top-2 mt-2 z-50  w-[780px] rounded-xl bg-[#e3edfe] dark:bg-slate-950  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
+          <ul className=" text-[16px]  gap-8 dark:text-slate-300 flex font-medium items-center">
             <li className=" text-xl rounded-xl p-2">
               <Link href="/">
                 <Image
@@ -58,16 +58,16 @@ const Navbar = () => {
                 />
               </Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-400 p-2">
+            <li className=" dark:hover:text-cyan-600 hover:text-cyan-500 hover:underline hover:underline-offset-2  p-2">
               <Link href="/about">About</Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-400 p-2">
+            <li className=" hover:text-blue-600 hover:underline hover:underline-offset-2 dark:hover:blue-slate-600 p-2">
               <Link href="/projects">Projects</Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-400  p-2">
+            <li className=" hover:text-pink-600 hover:underline hover:underline-offset-2 dark:hover:text-pink-600  p-2">
               <Link href="/technology">Technology</Link>
             </li>
-            <li className=" hover:text-slate-600 dark:hover:text-slate-400 p-2">
+            <li className=" hover:text-violet-600 hover:underline hover:underline-offset-2 dark:hover:text-voilet-600 p-2">
               <Link href="/blog">Blog</Link>
             </li>
             <button

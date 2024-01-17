@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
       <div className="  bg-centre bg-[url('/wallpaper.png')]  ">
-        <div className="flex dark:bg-black justify-center text-white">
+        <div className="flex dark:bg-slate-950 justify-center text-white">
           <div className=" w-full max-w-[780px] mx-auto my-4 flex flex-col">
             <div className=" flex flex-row justify-between mt-10">
               <div>
@@ -21,7 +21,7 @@ const Footer = () => {
                 <ul className="flex flex-col text-[1rem] gap-4 ">
                   <li>
                     <Link
-                      className=" dark:text-white dark:hover:text-slate-300"
+                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
                       href="/"
                     >
                       Home
@@ -29,24 +29,24 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      className=" dark:text-white dark:hover:text-slate-300"
-                      href="/"
+                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
+                      href="/about"
                     >
                       About
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className=" dark:text-white dark:hover:text-slate-300"
-                      href="/"
+                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
+                      href="/projects"
                     >
                       Projects
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className=" dark:text-white dark:hover:text-slate-300"
-                      href="/"
+                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
+                      href="/blog"
                     >
                       Blog
                     </Link>
@@ -59,8 +59,8 @@ const Footer = () => {
                 </h1>
                 <ul className="flex flex-col gap-4 dark:text-white ">
                   <a
-                    className=" hover:text-slate-300 flex flex-row items-center gap-2"
-                    href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
+                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                    href="https://www.github.com/thapabishal21tech/"
                     target="_blank"
                   >
                     {" "}
@@ -68,7 +68,7 @@ const Footer = () => {
                     GitHub
                   </a>
                   <a
-                    className=" hover:text-slate-300 flex flex-row items-center gap-2"
+                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
                     href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
                     target="_blank"
                   >
@@ -77,8 +77,8 @@ const Footer = () => {
                     LinkedIn
                   </a>
                   <a
-                    className=" hover:text-slate-300 flex flex-row items-center gap-2"
-                    href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
+                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                    href="https://www.x.com/"
                     target="_blank"
                   >
                     {" "}
@@ -86,8 +86,8 @@ const Footer = () => {
                     Twitter
                   </a>
                   <a
-                    className=" hover:text-slate-300 flex flex-row items-center gap-2"
-                    href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
+                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                    href="mailto:thapabishal21dev@gmail.com"
                     target="_blank"
                   >
                     {" "}
@@ -97,7 +97,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h1 className=" dark:text-neutral-400 text-sm font-bold my-2">
+                <h1 className=" dark:text-neutral-400  text-sm font-bold my-2">
                   SUPPORT MY WORK
                 </h1>
                 <ul className="dark:text-white gap-2">

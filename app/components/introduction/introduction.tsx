@@ -10,7 +10,7 @@ import { IoPersonSharp } from "react-icons/io5";
 const Introduction = () => {
   return (
     <>
-      <div className=" relative text-black dark:text-white  z-10 flex justify-center ">
+      <div className=" relative text-black dark:text-white z-10 flex justify-center ">
         <div className=" mt-20 w-[780px] ">
           <div className="flex flex-col justify-between  ">
             <div className=" flex flex-row mt-12 justify-between">
@@ -23,7 +23,7 @@ const Introduction = () => {
                 <div className="">
                   <h1 className="dark:text mt-2 from-[#00ffee] to-[#001eff] text-3xl font-bold text-slate-700">
                     <span className="bg-clip-text dark:text-transparent bg-gradient-to-r from-[#00ffee] to-[#001eff]">
-                      Frontend Software Developer
+                      React Developer
                     </span>{" "}
                   </h1>{" "}
                   <div className=" flex flex-row items-center text-2xl text-neutral-700 font-bold dark:text-white">
@@ -50,12 +50,13 @@ const Introduction = () => {
             </div>
             <div className="flex dark:text-white flex-col  font-medium text-[16px] text-black mt-4">
               <p className=" w-[520px]">
-                Motivated Junior React Developer with expertise in HTML, CSS,
-                JavaScript (ES6), and ReactJS. Dedicated to delivering
-                high-quality, responsive user interfaces and enhancing
-                functionality through API integration. A collaborative team
-                player with a passion for innovative projects and a commitment
-                to continuous skill enhancement in software development.
+                Motivated Junior React Developer with knowledge in JavaScript
+                (ES6), ReactJS , Nextjs and many others Frontend Techstack.
+                Dedicated to delivering high-quality, responsive user interfaces
+                and enhancing functionality through API integration. A
+                collaborative team player with a passion for innovative projects
+                and a commitment to continuous skill enhancement in software
+                development.
               </p>
             </div>
             <div className=" flex flex-row gap-4 my-4 items-center">
@@ -102,7 +103,7 @@ const Introduction = () => {
                     </p>
                   </a>
                   <a
-                    href="mailto:thapabishal21sinha@gmail.com"
+                    href="mailto:thapabishal21dev@gmail.com"
                     target="_blank"
                     className="hover:bg-slate-200 p-1 rounded-md dark:hover:bg-slate-800"
                   >
@@ -122,28 +123,3 @@ const Introduction = () => {
 };
 
 export default Introduction;
-
-{
-  /* <div className="absolute w-full h-screen">
-<BackgroundGradient />
-</div>
-
-
-// import BackgroundGradient from "@/app/background";
-
-
-------------------
-
-<div className="relative  dark:bg-black h-screen transition-all duration-500 ease-out delay-0 ">
-      <div className=" flex justify-center">
-        <div className="relative w-4/6 flex z-50 justify-center border-blur max-h-screen py-28">
-          
-        </div>
-      </div>
-    </div>
-
-
------------------------------
-
-*/
-}

@@ -26,7 +26,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
         />
       </Head>
-      <body className={`${inter.className} dark:dark:bg-[#000a1f]`}>
+      <body className={`${inter.className} dark:dark:bg-slate-950`}>
         <Navbar />
         {children}
         <Footer />

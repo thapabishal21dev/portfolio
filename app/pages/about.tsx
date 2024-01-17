@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import SingleTech from "../technology/singleTech";
 import Techstack from "../components/techstack";
 import { TbBrandNextjs } from "react-icons/tb";
 import {
@@ -25,7 +24,7 @@ import { RiReactjsFill } from "react-icons/ri";
 
 const AboutPage = () => {
   return (
-    <div className=" flex justify-center w-screen pt-32 dark:bg-slate-950 text-black dark:text-white">
+    <div className=" flex justify-center pt-32 dark:bg-slate-950 text-black dark:text-white">
       <div className=" w-[780px] ">
         <div className=" flex flex-col">
           <h1 className=" text-center  font-extrabold text-5xl text-[#757575]"></h1>
@@ -132,7 +131,7 @@ const AboutPage = () => {
               </p>
             </a>
             <a
-              href="mailto:thapabishal21sinha@gmail.com"
+              href="mailto:thapabishal21dev@gmail.com"
               className="hover:bg-slate-200 p-2 rounded-md dark:hover:bg-slate-800"
             >
               {" "}
@@ -216,26 +215,26 @@ const AboutPage = () => {
           <div className=" flex flex-col">
             <div className=" flex flex-row gap-10 py-10">
               <div className=" flex flex-row gap-10 min-w-[300px] ">
-                <h1 className=" text-lg text-blue-400 ">
-                  october 2023 - December 2023
+                <h1 className=" text-lg text-blue-500 ">
+                  December 2023 - present
                 </h1>
               </div>
               <div className=" flex flex-col gap-1">
-                <h1 className=" text-lg text-blue-400 ">
+                <h1 className=" text-lg text-blue-500 ">
                   Junior React Developer
                 </h1>
                 <p className=" text-sm font-semibold ">Freelancher</p>
-                <p className=" text-sm">worked in different web application</p>
+                <p className=" text-sm">working in dashboard</p>
               </div>
             </div>
             <div className=" flex flex-row  gap-10 py-10">
               <div className=" flex flex-row gap-10 min-w-[300px] ">
-                <h1 className=" text-lg text-cyan-400 ">
+                <h1 className=" text-xl text-blue-500 ">
                   June 2023 - September 2023
                 </h1>
               </div>
               <div className=" flex flex-col gap-1">
-                <h1 className=" text-lg text-blue-500 ">React Intern</h1>
+                <h1 className=" text-xl text-blue-500 ">React Intern</h1>
                 <p className=" text-sm font-semibold ">LancemeUp</p>
                 <p className=" text-sm">worked in different web application</p>
               </div>

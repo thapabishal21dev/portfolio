@@ -68,13 +68,7 @@ const Github = () => {
             thapabishal21tech on Github - {thisYear.getFullYear()}
           </Link>
         </h1>
-        <h1 className=" text-center text-md ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quos
-          tempore perspiciatis aperiam amet nobis iure possimus eligendi
-          expedita doloribus Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Illum deserunt ab rem? Fuga maxime repellendus facilis odit
-          doloribus, alias eum!
-        </h1>
+        <h1 className=" text-center text-md "></h1>
       </div>
     </div>
   );
