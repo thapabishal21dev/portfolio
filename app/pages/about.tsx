@@ -83,7 +83,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div>
-          <h1 className="text-xl py-5 text-neutral-300 font-semibold">
+          <h1 className="text-xl py-5 bg-gradient-to-r from-violet-500 to-pink-500 inline-block text-transparent bg-clip-text font-bold">
             lets connect!
           </h1>
           <p>
@@ -142,7 +142,7 @@ const AboutPage = () => {
           </div>
         </div>
         <div>
-          <h1 className="text-xl py-5 bg-gradient-to-r from-[#00c8ff] to-[#00ff80] inline-block text-transparent bg-clip-text font-bold">
+          <h1 className="text-xl py-5 bg-gradient-to-r from-cyan-500 to-green-500 inline-block text-transparent bg-clip-text font-bold">
             Skills
           </h1>
         </div>

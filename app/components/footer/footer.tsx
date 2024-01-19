@@ -1,12 +1,35 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { FaGithub, FaLinkedin, FaReact } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import React, { useState, useEffect } from "react";
+import { FaClock } from "react-icons/fa6";
+
+interface Quote {
+  _id: string;
+  content: string;
+  author: string;
+}
 const Footer = () => {
-  let currentYear = new Date();
-  //bg-[#0e1732]  justify
+  let newData = new Date();
+  let getHour = newData.getHours();
+  let getMinutes = newData.getMinutes();
+  let getAm_Pm = newData.toLocaleTimeString();
+
+  const [quotes, setQuotes] = useState<Quote[]>([]);
+
+  useEffect(() => {
+    // Fetch random quotes from the API
+    fetch("https://api.quotable.io/quotes/random?limit=1") // Change the limit as needed
+      .then((response) => response.json())
+      .then((data) => {
+        // Assuming the response is an array with quotes
+        setQuotes(data);
+      })
+      .catch((error) => console.error("Error fetching quotes:", error));
+  }, []);
 
   return (
     <>
@@ -60,15 +83,6 @@ const Footer = () => {
                 <ul className="flex flex-col gap-4 dark:text-white ">
                   <a
                     className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                    href="https://www.github.com/thapabishal21tech/"
-                    target="_blank"
-                  >
-                    {" "}
-                    <FaGithub />
-                    GitHub
-                  </a>
-                  <a
-                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
                     href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
                     target="_blank"
                   >
@@ -76,6 +90,16 @@ const Footer = () => {
                     <FaLinkedin />
                     LinkedIn
                   </a>
+                  <a
+                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                    href="https://www.github.com/thapabishal21tech/"
+                    target="_blank"
+                  >
+                    {" "}
+                    <FaGithub />
+                    GitHub
+                  </a>
+
                   <a
                     className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
                     href="https://www.x.com/"
@@ -96,21 +120,35 @@ const Footer = () => {
                   </a>
                 </ul>
               </div>
-              <div>
-                <h1 className=" dark:text-neutral-400  text-sm font-bold my-2">
-                  SUPPORT MY WORK
+              <div className="">
+                <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
+                  THOUGHT OF THE DAY
                 </h1>
-                <ul className="dark:text-white gap-2">
-                  <li>
-                    <button>Buy me a coffee</button>
-                  </li>
-                  <li>
-                    <button>Paypal</button>
-                  </li>
-                </ul>
+                <div className="  w-[300px] text-sm text-blue-200 italic pb-2 ">
+                  {quotes.length > 0 ? (
+                    <div>
+                      {quotes.map((quote) => (
+                        <div key={quote._id} className=" gap-2 flex flex-col">
+                          <p>{`❛❛ ${quote.content} ❜❜`}</p>
+                          <p className="text-yellow-500">-{quote.author}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div>
+                      <p>loading...</p>
+                    </div>
+                  )}
+                </div>
+                <div className=" flex flex-row items-center gap-2 text-sm text-slate-200 font-semibold">
+                  <p>
+                    <FaClock />
+                  </p>
+                  <p>{`${getHour}:${getMinutes} Kathmandu,Nepal`}</p>
+                </div>
               </div>
             </div>
-            <div className=" flex flex-col justify-center items-center border-t mt-10 border-slate-400 dark:border-slate-700  ">
+            <div className=" flex flex-col justify-center items-center border-t mt-10 border-slate-400 dark:border-slate-700 ">
               <div className=" flex flex-col justify-center items-center my-4 ">
                 <div className=" flex items-center justify-center gap-4">
                   <span className="  font-bold text-sm font-mono dark:text-slate-500">
@@ -153,7 +191,7 @@ const Footer = () => {
                       BISHAL THAPA.
                       <i className="devicon-flutter-plain colored"></i>
                     </span>{" "}
-                    All rights reserved &copy; {currentYear.getFullYear()}.
+                    All rights reserved &copy; {newData.getFullYear()}.
                   </h1>
                 </div>
               </div>
@@ -166,5 +204,4 @@ const Footer = () => {
 };
 
 export default Footer;
-
 // with 💙.

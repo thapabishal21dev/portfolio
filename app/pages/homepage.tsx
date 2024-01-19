@@ -1,7 +1,7 @@
 import React from "react";
 import Introduction from "../components/introduction/introduction";
-import HomePageAbout from "../components/shortaboutus/shortabout";
 import Github from "../components/github/github";
+import HomePageAbout from "../components/homepageaboutus/homePageAboutUs";
 
 const HomePage = () => {
   return (
