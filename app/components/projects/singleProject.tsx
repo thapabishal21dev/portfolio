@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,8 +10,29 @@ import { SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { RiReactjsFill } from "react-icons/ri";
 import { SiVercel } from "react-icons/si";
+import { useRouter } from "next/router";
+
+// interface INewData {
+//   productId: number | undefined;
+// }
 
 const SingleProject = () => {
+  // const router = useRouter();
+  // const { data } = router.query;
+  // const newData = router.query?.newData;
+
+  // console.log("value passed", newData);
+
+  // useEffect(() => {
+  //   const findProjectId = ProjectsList.find(
+  //     (projectid) => projectid.projectId === dataFromQuery
+  //   );
+  //   if (findProjectId) {
+  //     setSelectProject(findProjectId);
+  //   }
+  // }, [dataFromQuery]);
+
+  // console.log("final value", data);
   return (
     <>
       <div className=" dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-950 to-black flex justify-center dark:text-white">

@@ -50,18 +50,19 @@ const AboutPage = () => {
         </div>
         <div className=" text-justify py-4 flex flex-col gap-4 text-[16px]">
           <p>
-            As a professional software developer, I create amazing scalable web
-            applications app to make the internet a better place. I am an
-            advocate for a decentralized internet, with major interest in the
-            FinTech and DeFi space. Enthusiast with experience in production
-            level technologies.
+            A passionate Junior React Developer with a solid foundation in
+            building dynamic and responsive web applications. Over the past 6
+            months , I&apos;ve honed my skills through immersive internships and
+            freelancing projects, where I&apos;ve had the opportunity to
+            contribute to the development of engaging and user-friendly
+            websites.
           </p>
           <p>
-            I am 27 years old and have been a professional web developer for
-            about 5 years now. The technologies I work with are JavaScript,
-            Python and Solidity with a focus on Django, React.js, Next.js, Node
-            and Express. I use code not only to do my day-to-day job, but also
-            to contribute to open-source projects.
+            In my internship experience, I gained hands-on experience in
+            React.js, building and efficient components that enhance the overall
+            user experience. Through freelancing, I&apos;ve further solidified
+            my abilities in creating intuitive user interfaces and ensuring
+            seamless interactions.
           </p>
         </div>
         <div>
@@ -75,11 +76,10 @@ const AboutPage = () => {
         </div>
         <div>
           <p>
-            When I am not writing code I love to spend time with my family and
-            friends in Lagos. I hang around a couple of DAOs on Discord and
-            actively contribute to the MoonShot Collective work-stream of
-            GitcoinDAO and I love to read fiction and non-fiction books, watch
-            sci-fi movies and play games on my playstation console.
+            As I embark on the next step of my journey, I&apos;m excited about
+            the prospect of joining a forward-thinking organization where I can
+            continue to learn and contribute to impactful projects. Let&apos;s
+            build something amazing together!
           </p>
         </div>
         <div>
