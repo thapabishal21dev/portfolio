@@ -21,11 +21,9 @@ const Footer = () => {
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
   useEffect(() => {
-    // Fetch random quotes from the API
-    fetch("https://api.quotable.io/quotes/random?limit=1") // Change the limit as needed
+    fetch("https://api.quotable.io/quotes/random?limit=1")
       .then((response) => response.json())
       .then((data) => {
-        // Assuming the response is an array with quotes
         setQuotes(data);
       })
       .catch((error) => console.error("Error fetching quotes:", error));

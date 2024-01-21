@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { PiArrowLeftLight } from "react-icons/pi";
 import { FaArrowLeft, FaGithub } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import Techstack from "../techstack";
@@ -14,7 +15,7 @@ import { ApiDataContext } from "@/app/context/context";
 import { ProjectsList } from "@/app/lib/data/data";
 interface ISelectProjectList {
   productId?: number | undefined;
-  projectImg: string;
+  projectImg: any;
   projectTitle?: string;
   projectDescription?: string;
   projectLink?: string;
@@ -41,67 +42,67 @@ const SingleProject = () => {
   return (
     <>
       {selectProject && (
-        <div className=" dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-950 to-black flex justify-center dark:text-white">
-          <div className=" w-[780px] my-24 ">
+        <div className=" dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-950 to-black flex justify-center dark:text-white ">
+          <div className=" w-[780px] my-24 dark:text-slate-400 ">
             <Link href="/projects">
-              <div className=" flex flex-row items-center gap-2 mb-6">
-                <p className=" text-slate-500">
-                  <FaArrowLeft />
+              <div className=" dark:bg-slate-800  hover:bg-slate-900 px-3 py-1 w-fit flex flex-row rounded-2xl border-2 border-slate-500 items-center gap-2 mt-6">
+                <p className=" text-slate-100 ">
+                  <PiArrowLeftLight />
                 </p>
-                <p className=" text-md font-bold bg-gradient-to-r from-green-700 to-green-600 hover:bg-gradient-to-r hover:from-green-400  hover:to-green-400  inline-block text-transparent bg-clip-text">
-                  Go Back
+                <p className=" text-sm bg-gradient-to-r from-green-600 to-green-500 hover:bg-gradient-to-r hover:from-green-400  hover:to-green-400 inline-block text-transparent bg-clip-text">
+                  Back to Project
                 </p>
               </div>
             </Link>
 
             <div className=" pt-6">
-              <div className=" flex flex-row justify-center items-center gap-8">
+              <div className=" flex flex-row justify-start items-center gap-8">
                 <div className="">
-                  <h1 className="  text-3xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                  {/* <h1 className="  text-2xl font-bold bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text"> */}
+                  <h1 className="text-2xl font-bold bg-gradient-to-br from-slate-100 to-neutral-700 text-transparent bg-clip-text">
                     {selectProject.projectTitle}
                   </h1>
                 </div>
               </div>
-              <div className=" flex flex-row justify-center items-center  gap-10 my-6">
+              <div className=" flex flex-row  items-center gap-6 my-4">
                 {" "}
                 <a
                   href={`https://${selectProject.projectLink}`}
                   target="_blank"
                 >
-                  <span className=" flex flex-row items-center  hover:cursor-pointer  text-md hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1 ">
-                    <a href={selectProject.projectLink} target="_blank" />{" "}
-                    {selectProject.projectLink}
+                  <span className=" flex flex-row items-center truncate  hover:cursor-pointer  text-md hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1 ">
+                    Live Demo
                     <FiArrowUpRight />
                   </span>
                 </a>
                 <div>
                   <a
-                    href={`https://${selectProject.projectGithub}`}
+                    href={`https://github.com/thapabishal21tech${selectProject.projectGithub}`}
                     target="_blank"
                   >
-                    <span className=" flex gap-2 flex-row items-center  hover:cursor-pointer  text-md hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1 ">
+                    <span className=" flex gap-2 flex-row items-center truncate  hover:cursor-pointer  text-md hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1 ">
                       <FaGithub />
-                      thapabishal21tech/{selectProject.projectTitle}
+                      &lt;/&gt; Source Code
                       <FiArrowUpRight />
                     </span>
                   </a>
                 </div>
               </div>
             </div>
-
-            <div className=" flex justify-center px-18">
+            {/* bg-gradient-to-b from-blue-600 to-violet-600 */}
+            <div className=" bg-[url('/wallpaper.png')] flex justify-center  rounded-xl h-[380px]">
               <Image
-                className="border-2 border-neutral-500  rounded-lg mx-4"
-                width={700}
-                height={700}
-                src={"/screenshot.png"}
+                className=" border-2 border-neutral-500 rounded-xl m-12 w-fit"
+                width={1000}
+                height={1000}
+                src={selectProject.projectImg}
                 alt="project1"
               />
             </div>
-            <div className=" text-justify flex py-6 mx-10 justify-center">
+            <div className=" text-justify flex py-6">
               <p>{selectProject.projectDescription}</p>
             </div>
-            <div className="  flex flex-row gap-4 mx-10 ">
+            <div className="  flex flex-row gap-4 ">
               <Techstack
                 techName={"TypeScript"}
                 techImg={<SiTypescript />}

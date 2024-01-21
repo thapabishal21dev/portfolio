@@ -14,6 +14,7 @@ const ProjectsListsPage: React.FC = () => {
                 projectTitle={item.projectTitle}
                 projectDescription={item.projectDescription}
                 productId={item.projectId}
+                projectImg={item.projectImg}
               />
             </div>
           ))}
