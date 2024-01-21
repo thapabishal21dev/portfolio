@@ -3,8 +3,8 @@ import Techstack from "../components/techstack";
 
 const Technology = () => {
   return (
-    <div className="flex h-auto justify-center mt-20 overflow-hidden">
-      <div className=" w-[780px] h-screen dark:text-white ">
+    <div className="flex h-auto justify-center dark:bg-slate-950 overflow-hidden">
+      <div className=" w-[780px] h-screen mt-20 dark:text-white ">
         <div className=" mt-14">
           <h1 className="text-xl py-5 bg-gradient-to-r from-[#00c8ff] to-[#00ff80] inline-block text-transparent bg-clip-text font-bold">
             Skills

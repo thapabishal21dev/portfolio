@@ -140,7 +140,7 @@ const Footer = () => {
                     </div>
                   )}
                 </div>
-                <div className=" flex flex-row items-center gap-2 text-sm text-slate-200 font-semibold">
+                <div className=" flex flex-row items-center gap-2 text-sm text-slate-200 font-bold">
                   <p>
                     <FaClock />
                   </p>

@@ -10,7 +10,7 @@ import { IoPersonSharp } from "react-icons/io5";
 const Introduction = () => {
   return (
     <>
-      <div className=" relative text-black dark:text-white z-10 flex justify-center ">
+      <div className=" relative dark:bg-slate-950 text-black dark:text-white z-10 flex justify-center ">
         <div className=" mt-20 w-[780px] ">
           <div className="flex flex-col justify-between  ">
             <div className=" flex flex-row mt-12 justify-between">

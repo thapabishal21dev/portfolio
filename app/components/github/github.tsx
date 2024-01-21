@@ -25,9 +25,9 @@ const Github = () => {
   };
 
   return (
-    <div className=" flex justify-center dark:text-white ">
+    <div className=" flex justify-center dark:bg-slate-950 dark:text-white ">
       <div className=" w-[780px] my-12  ">
-        <h1 className=" text-center font-semibold text-2xl ">
+        <h1 className=" text-center font-bold text-2xl ">
           Github Contributions
         </h1>{" "}
         <div className=" mx-16 flex justify-center my-6 flex-row gap-4 ">

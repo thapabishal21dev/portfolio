@@ -1,8 +1,8 @@
 "use client";
+import { ApiDataContext } from "@/app/context/context";
+import { useContext, useEffect } from "react";
 import Image from "next/image";
-import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 interface IParams {
   params?: string;
   projectTitle?: string;
@@ -16,17 +16,11 @@ const ListProjects = ({
   projectDescription,
   productId,
 }: IParams) => {
-  // const router = useRouter();
+  const { setUserApiData } = useContext(ApiDataContext);
 
-  // const data = "kanban";
-
-  // const handleClickData = () => {
-  //   router.push({
-  //     pathname: `/projects/${params}`,
-  //     query: { data },
-  //   });
-  // };
-  // console.log("semifinalvalue", productId);
+  const handleClick = () => {
+    setUserApiData(productId);
+  };
 
   return (
     <>
@@ -54,7 +48,10 @@ const ListProjects = ({
             <div>
               <Link href={`/projects/${params}`}>
                 {" "}
-                <button className=" dark:bg-violet-700 dark:hover:bg-violet-900 text-white px-3 py-1 rounded-md font-semibold bg-black dark:text-white hover:bg-slate-800">
+                <button
+                  onClick={handleClick}
+                  className=" dark:bg-violet-700 dark:hover:bg-violet-900 text-white px-3 py-1 rounded-md font-bold bg-black dark:text-white hover:bg-slate-800"
+                >
                   visit project
                 </button>
               </Link>

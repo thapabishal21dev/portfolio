@@ -89,7 +89,7 @@ const HomePageAbout = () => {
           <h1 className="text-3xl py-5 bg-gradient-to-r from-pink-700 to-blue-700 dark:bg-gradient-to-r dark:from-pink-500 dark:to-blue-500 inline-block text-transparent bg-clip-text font-bold">
             Experience
           </h1>
-          <div className=" flex flex-col font-semibold">
+          <div className=" flex flex-col font-bold">
             <div className=" flex flex-row gap-10 py-10">
               <div className=" flex flex-row gap-10 min-w-[300px] ">
                 <h1 className=" text-lg text-blue-500 ">

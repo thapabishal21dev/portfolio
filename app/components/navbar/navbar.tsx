@@ -55,6 +55,7 @@ const Navbar = () => {
                   width={200}
                   height={200}
                   alt="avatar"
+                  property="priority"
                 />
               </Link>
             </li>
