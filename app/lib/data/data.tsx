@@ -12,6 +12,11 @@ interface IProject {
   projectDescription?: string;
   projectLink?: string;
   projectGithub?: string;
+  projectBorderColor?: string;
+  projectShadowColor?: string;
+  projectBorderColorLight?: string;
+  projectBgColorLight?: string;
+  projectShadowColorLight?: string;
 }
 
 export const ProjectsList: IProject[] = [
@@ -22,6 +27,11 @@ export const ProjectsList: IProject[] = [
     projectDescription: "Created Portfolio using Nextjs,Reactjs,tailwindCSS",
     projectLink: "portfolio-thapabishal21tech.vercel.app",
     projectGithub: "/portfolio",
+    projectBorderColor: "dark:hover:border-green-500",
+    projectShadowColor: `dark:hover:drop-shadow-[0_0_12px_#22c55e]`,
+    projectBorderColorLight: "hover:border-green-500",
+    projectBgColorLight: "hover:bg-green-100",
+    projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#22c55e]`,
   },
   {
     projectId: 2,
@@ -31,6 +41,11 @@ export const ProjectsList: IProject[] = [
       "Learning Educational website using nextjs,reactjs,sass",
     projectLink: "project-turnstone-thapabishal21tech.vercel.app",
     projectGithub: "/project_turnstone",
+    projectBorderColor: "dark:hover:border-blue-500",
+    projectShadowColor: `dark:hover:drop-shadow-[0_0_12px_#3b82f6]`,
+    projectBorderColorLight: "hover:border-blue-500",
+    projectBgColorLight: "hover:bg-blue-100",
+    projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#3b82f6]`,
   },
   {
     projectId: 3,
@@ -39,6 +54,11 @@ export const ProjectsList: IProject[] = [
     projectDescription: "crudtask-app",
     projectLink: "thapabishal21tech.github.io/React-task-app",
     projectGithub: "/React-task-app",
+    projectBorderColor: "dark:hover:border-cyan-500",
+    projectShadowColor: `dark:hover:drop-shadow-[0_0_12px_#06b6d4]`,
+    projectBorderColorLight: "hover:border-cyan-500",
+    projectBgColorLight: "hover:bg-cyan-100",
+    projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#06b6d4]`,
   },
   {
     projectId: 4,
@@ -47,6 +67,11 @@ export const ProjectsList: IProject[] = [
     projectDescription: "fullcrud-task-app",
     projectLink: "thapabishal21tech.github.io/CrudApp_task2",
     projectGithub: "/CrudApp_task2",
+    projectBorderColor: "dark:hover:border-violet-500",
+    projectShadowColor: `dark:hover:drop-shadow-[0_0_12px_#8b5cf6]`,
+    projectBorderColorLight: "hover:border-violet-500",
+    projectBgColorLight: "hover:bg-violet-100",
+    projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#8b5cf6]`,
   },
   {
     projectId: 5,
@@ -55,6 +80,11 @@ export const ProjectsList: IProject[] = [
     projectDescription: "full resonsive website",
     projectLink: "thapabishal21tech.github.io/tailwind-responsive-design",
     projectGithub: "/tailwind-responsive-design",
+    projectBorderColor: "dark:hover:border-pink-500",
+    projectShadowColor: `dark:hover:drop-shadow-[0_0_12px_#ec4899]`,
+    projectBorderColorLight: "hover:border-pink-500",
+    projectBgColorLight: "hover:bg-pink-100",
+    projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#ec4899]`,
   },
   {
     projectId: 6,
@@ -63,5 +93,10 @@ export const ProjectsList: IProject[] = [
     projectDescription: "responsive site",
     projectLink: "thapabishal21tech.github.io/Responsivewebsite",
     projectGithub: "/Responsivewebsite/tree/gh-pages",
+    projectBorderColor: "dark:hover:border-sky-500",
+    projectShadowColor: `dark:hover:drop-shadow-[0_0_12px_#0ea5e9]`,
+    projectBorderColorLight: "hover:border-sky-500",
+    projectBgColorLight: "hover:bg-sky-100",
+    projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#0ea5e9]`,
   },
 ];

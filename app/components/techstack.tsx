@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion, Variants } from "framer-motion";
 
 interface ITechStackProps {
   techName?: string;
@@ -14,10 +15,28 @@ const Techstack = (props: ITechStackProps) => {
   const getBorderColor = props.HoverBorderColor;
   const getBgColor = props.hoverBgColor;
 
+  const fadeInUpAnimation: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <>
-      <div
-        className={` w-fit px-3 py-1 rounded-md flex flex-row items-center gap-2 cursor-pointer border-2 ${getBorderColor} ${getBgColor} hover:bg-opacity-60 dark:bg-opacity-40 min-h-9 border-2 border-slate-400  `}
+      <motion.div
+        initial="hidden"
+        animate="show"
+        variants={fadeInUpAnimation}
+        className={` w-fit px-3 py-1 rounded-lg flex flex-row items-center gap-2 cursor-pointer border-2 ${getBorderColor} ${getBgColor} hover:bg-opacity-60 dark:bg-opacity-40 min-h-9 border-2 border-slate-400  `}
       >
         <div>
           <p className=" text-md text-neutral-600 dark:text-white ">
@@ -29,7 +48,7 @@ const Techstack = (props: ITechStackProps) => {
             {getTechName}
           </p>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
