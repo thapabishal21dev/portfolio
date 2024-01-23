@@ -36,8 +36,6 @@ const Footer = () => {
         setQuotes(data);
       })
       .catch((error) => console.error("Error fetching quotes:", error));
-
-    console.log("footerpage");
   }, []);
 
   return (
@@ -134,7 +132,7 @@ const Footer = () => {
                   THOUGHT OF THE DAY
                 </h1>
                 <div className="  w-[300px] text-sm text-blue-200 italic pb-2 ">
-                  {quotes.length > 0 ? (
+                  {quotes.length ? (
                     <div>
                       {quotes.map((quote) => (
                         <div key={quote._id} className=" gap-2 flex flex-col">
