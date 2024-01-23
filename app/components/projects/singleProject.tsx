@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { PiArrowLeftLight } from "react-icons/pi";
-import { FaGithub, FaImage } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import Techstack from "../techstack";
 import { SiTypescript } from "react-icons/si";
@@ -15,6 +15,7 @@ import { ApiDataContext } from "@/app/context/context";
 import { ProjectsList } from "@/app/lib/data/data";
 import { motion, Variants } from "framer-motion";
 import { IProject } from "@/app/lib/data/data";
+import { useRouter } from "next/navigation";
 
 const fadeInUpAnimation: Variants = {
   hidden: {
@@ -35,17 +36,19 @@ const SingleProject = () => {
   const [selectProject, setSelectProject] = useState<IProject>({} as IProject);
   const { userApiData } = useContext(ApiDataContext);
 
+  const router = useRouter();
+
   useEffect(() => {
     const foundProjectId = ProjectsList.find(
       (item) => item.projectId === userApiData
     );
     if (foundProjectId) {
       setSelectProject(foundProjectId);
+    } else {
+      router.push("/projects");
+      return;
     }
-  }, [userApiData]);
-
-  console.log("projectdetails", selectProject);
-  console.log("img", userApiData);
+  }, []);
 
   return (
     <>
@@ -106,15 +109,16 @@ const SingleProject = () => {
                 className=""
               >
                 <div
-                  className=" flex justify-center rounded-xl h-[380px] pattern-dots pattern-gray-500 pattern-bg-white
+                  className=" flex justify-center rounded-xl  pattern-dots pattern-gray-500 pattern-bg-white
                 pattern-size-2 pattern-opacity-100 dark:border-slate-300 border-2 "
                 >
                   <Image
-                    className="border-2 rounded-xl w-fit mx-12 my-12"
+                    className="border-2 rounded-xl bg-stone-200 border-gray-500 "
                     width={1000}
                     height={1000}
                     src={selectProject.projectImg ?? "/wallpaper.png"}
                     alt={selectProject.projectDescription ?? "ProjectImg"}
+                    priority
                   />
                 </div>
                 <div className=" text-justify flex py-6">

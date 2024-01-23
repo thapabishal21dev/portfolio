@@ -13,9 +13,19 @@ interface Quote {
   author: string;
 }
 const Footer = () => {
-  let newData = new Date();
-  let getHour = newData.getHours();
-  let getMinutes = newData.getMinutes();
+  const [time, setTime] = useState(new Date());
+  useEffect(() => {
+    const timeId = setInterval(() => setTime(new Date()), 1000);
+    return () => {
+      clearInterval(timeId);
+    };
+  });
+  const formattedTime = time.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  const getCurrentYear = time.getFullYear();
 
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
@@ -141,7 +151,7 @@ const Footer = () => {
                   <p>
                     <FaClock />
                   </p>
-                  <p>{`${getHour}:${getMinutes} Kathmandu,Nepal`}</p>
+                  <p>{`${formattedTime} Kathmandu,Nepal`}</p>
                 </div>
               </div>
             </div>
@@ -188,7 +198,7 @@ const Footer = () => {
                       BISHAL THAPA.
                       <i className="devicon-flutter-plain colored"></i>
                     </span>{" "}
-                    All rights reserved &copy; {newData.getFullYear()}.
+                    All rights reserved &copy; {getCurrentYear}.
                   </h1>
                 </div>
               </div>
