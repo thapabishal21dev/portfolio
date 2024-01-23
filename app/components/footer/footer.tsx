@@ -36,6 +36,8 @@ const Footer = () => {
         setQuotes(data);
       })
       .catch((error) => console.error("Error fetching quotes:", error));
+
+    console.log("footerpage");
   }, []);
 
   return (

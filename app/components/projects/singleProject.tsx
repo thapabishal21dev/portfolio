@@ -48,7 +48,8 @@ const SingleProject = () => {
       router.push("/projects");
       return;
     }
-  }, []);
+    console.log("singleproject");
+  }, [userApiData, router]);
 
   return (
     <>

@@ -9,6 +9,7 @@ const Github = () => {
 
   useEffect(() => {
     setIsClient(true);
+    console.log("githubpage");
   }, []);
 
   const [selectedYear, setSelectedYear] = useState<number>();
