@@ -1,7 +1,6 @@
 "use client";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import "./globals.css";
@@ -25,13 +24,6 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark scroll-smooth">
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-        />
-      </Head>
-
       <body className={`${inter.className}dark:dark:bg-slate-950`}>
         <ApiDataContext.Provider value={{ userApiData, setUserApiData }}>
           <Navbar />

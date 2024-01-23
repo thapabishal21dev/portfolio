@@ -16,7 +16,6 @@ const Footer = () => {
   let newData = new Date();
   let getHour = newData.getHours();
   let getMinutes = newData.getMinutes();
-  let getAm_Pm = newData.toLocaleTimeString();
 
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
