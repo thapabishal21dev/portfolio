@@ -17,11 +17,16 @@ import { motion, Variants } from "framer-motion";
 
 interface ISelectProjectList {
   productId?: number | undefined;
-  projectImg: any;
+  projectImg?: any;
   projectTitle?: string;
   projectDescription?: string;
   projectLink?: string;
   projectGithub?: string;
+  projectBorderColor?: string;
+  projectShadowColor?: string;
+  projectBorderColorLight?: string;
+  projectBgColorLight?: string;
+  projectShadowColorLight?: string;
 }
 
 const fadeInUpAnimation: Variants = {
