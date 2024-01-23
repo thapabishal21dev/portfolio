@@ -10,15 +10,15 @@ const ProjectsListsPage: React.FC = () => {
       opacity: 0,
       y: 20,
     },
-    animate: () => ({
+    animate: {
       opacity: 1,
       y: 0,
 
-      trasition: {
+      transition: {
         duration: 1.5,
         ease: "easeInOut",
       },
-    }),
+    },
   };
   return (
     <>
