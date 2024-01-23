@@ -5,7 +5,8 @@ import img4 from "@/public/projectImg/img4.png";
 import img5 from "@/public/projectImg/img5.png";
 import img6 from "@/public/projectImg/img6.png";
 
-interface IProject {
+export interface IProject {
+  params?: string;
   projectId?: number;
   projectImg?: any;
   projectTitle?: string;

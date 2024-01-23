@@ -10,7 +10,7 @@ const ProjectsListsPage: React.FC = () => {
       opacity: 0,
       y: 20,
     },
-    animate: (index: any) => ({
+    animate: () => ({
       opacity: 1,
       y: 0,
 
@@ -27,22 +27,20 @@ const ProjectsListsPage: React.FC = () => {
           <h1 className="text-2xl font-bold bg-gradient-to-br to-slate-300 from-slate-600 text-transparent bg-clip-text dark:bg-bg-gradient-to-br dark:to-slate-950 dark:from-slate-100 pt-12 pb-6 ">
             Projects
           </h1>
-          <div className="flex flex-row flex-wrap gap-10 ">
-            {ProjectsList.map((item, index) => (
+          <div className="flex flex-row flex-wrap gap-10  list-none ">
+            {ProjectsList.map((item) => (
               <motion.li
                 variants={fadeInAnimationVariants}
                 initial={fadeInAnimationVariants.initial}
                 animate="animate"
                 whileInView="animate"
-                viewport={{}}
-                custom={index}
                 key={item.projectId}
               >
                 <ListProjects
                   params={item.projectTitle}
                   projectTitle={item.projectTitle}
                   projectDescription={item.projectDescription}
-                  productId={item.projectId}
+                  projectId={item.projectId}
                   projectImg={item.projectImg}
                   projectBorderColor={item.projectBorderColor}
                   projectShadowColor={item.projectShadowColor}

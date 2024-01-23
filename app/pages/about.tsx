@@ -11,12 +11,10 @@ import {
   SiFigma,
   SiGit,
   SiGithub,
-  SiNextdotjs,
   SiRedux,
   SiSass,
   SiTailwindcss,
   SiTypescript,
-  SiVercel,
   SiJavascript,
 } from "react-icons/si";
 

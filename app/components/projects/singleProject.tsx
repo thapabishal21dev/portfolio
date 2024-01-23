@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { PiArrowLeftLight } from "react-icons/pi";
-import { FaArrowLeft, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import Techstack from "../techstack";
 import { SiTypescript } from "react-icons/si";
@@ -14,20 +14,7 @@ import { SiVercel } from "react-icons/si";
 import { ApiDataContext } from "@/app/context/context";
 import { ProjectsList } from "@/app/lib/data/data";
 import { motion, Variants } from "framer-motion";
-
-interface ISelectProjectList {
-  productId?: number | undefined;
-  projectImg?: any;
-  projectTitle?: string;
-  projectDescription?: string;
-  projectLink?: string;
-  projectGithub?: string;
-  projectBorderColor?: string;
-  projectShadowColor?: string;
-  projectBorderColorLight?: string;
-  projectBgColorLight?: string;
-  projectShadowColorLight?: string;
-}
+import { IProject } from "@/app/lib/data/data";
 
 const fadeInUpAnimation: Variants = {
   hidden: {
@@ -45,9 +32,7 @@ const fadeInUpAnimation: Variants = {
 };
 
 const SingleProject = () => {
-  const [selectProject, setSelectProject] = useState<ISelectProjectList>(
-    {} as ISelectProjectList
-  );
+  const [selectProject, setSelectProject] = useState<IProject>({} as IProject);
   const { userApiData } = useContext(ApiDataContext);
 
   useEffect(() => {

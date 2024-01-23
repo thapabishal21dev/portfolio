@@ -75,5 +75,3 @@ const Github = () => {
 };
 
 export default Github;
-
-//              year={parseFloat(selectedyear)}
