@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import ListProjects from "./listsProjects";
-import { ProjectsList } from "@/app/lib/data/data";
-import { motion } from "framer-motion";
+// import ListProjects from "./listsProjects";
+// import { ProjectsList } from "@/app/lib/data/data";
+// import { motion } from "framer-motion";
 
 const ProjectsListsPage: React.FC = () => {
   const fadeInAnimationVariants = {
@@ -28,7 +28,7 @@ const ProjectsListsPage: React.FC = () => {
             Projects
           </h1>
           <div className="flex flex-row flex-wrap gap-10  list-none ">
-            {ProjectsList.map((item) => (
+            {/* {ProjectsList.map((item) => (
               <motion.li
                 variants={fadeInAnimationVariants}
                 initial={fadeInAnimationVariants.initial}
@@ -49,7 +49,7 @@ const ProjectsListsPage: React.FC = () => {
                   projectShadowColorLight={item.projectShadowColorLight}
                 />
               </motion.li>
-            ))}
+            ))} */}
             <div className=" text-md hover:cursor-pointer flex items-center mx-auto my-8">
               <a
                 className=" dark:text-white hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1"
