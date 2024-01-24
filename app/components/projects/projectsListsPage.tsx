@@ -12,19 +12,12 @@ const ProjectsListsPage: React.FC = () => {
             Projects
           </h1>
           <div className="flex flex-row flex-wrap gap-10  list-none ">
-            {ProjectsList.map((item) => (
-              <li key={item.projectId}>
+            {ProjectsList.map((item, index) => (
+              <li key={index}>
                 <ListProjects
                   params={item.projectTitle}
-                  projectTitle={item.projectTitle}
-                  projectDescription={item.projectDescription}
+                  projectData={item}
                   projectId={item.projectId}
-                  projectImg={item.projectImg}
-                  projectBorderColor={item.projectBorderColor}
-                  projectShadowColor={item.projectShadowColor}
-                  projectBorderColorLight={item.projectBorderColorLight}
-                  projectBgColorLight={item.projectBgColorLight}
-                  projectShadowColorLight={item.projectShadowColorLight}
                 />
               </li>
             ))}

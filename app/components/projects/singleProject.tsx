@@ -13,7 +13,6 @@ import { RiReactjsFill } from "react-icons/ri";
 import { SiVercel } from "react-icons/si";
 import { ApiDataContext } from "@/app/context/context";
 import { ProjectsList } from "@/app/lib/data/data";
-import { motion, Variants } from "framer-motion";
 import { IProject } from "@/app/lib/data/data";
 import { useRouter } from "next/navigation";
 
@@ -33,7 +32,6 @@ const SingleProject = () => {
       router.push("/projects");
       return;
     }
-    console.log("singleproject");
   }, [userApiData, router]);
 
   return (

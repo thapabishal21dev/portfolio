@@ -221,8 +221,10 @@ const AboutPage = () => {
                 <h1 className=" text-lg text-blue-500 ">
                   Junior React Developer
                 </h1>
-                <p className=" text-sm font-bold ">Freelancher</p>
-                <p className=" text-sm">working in dashboard</p>
+                <p className=" text-sm font-bold dark:text-violet-500 text-green-500  ">
+                  Freelancher
+                </p>
+                <p className=" text-sm ">working in dashboard</p>
               </div>
             </div>
             <div className=" flex flex-row  gap-10 py-10">
@@ -233,7 +235,9 @@ const AboutPage = () => {
               </div>
               <div className=" flex flex-col gap-1">
                 <h1 className=" text-xl text-blue-500 ">React Intern</h1>
-                <p className=" text-sm font-bold ">LancemeUp</p>
+                <p className=" text-sm font-bold dark:text-violet-500 text-green-500 ">
+                  LancemeUp
+                </p>
                 <p className=" text-sm">worked in different web application</p>
               </div>
             </div>
