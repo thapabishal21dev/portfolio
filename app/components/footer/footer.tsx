@@ -88,43 +88,51 @@ const Footer = () => {
                   SOCIAL
                 </h1>
                 <ul className="flex flex-col gap-4 dark:text-white ">
-                  <a
-                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                    href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
-                    target="_blank"
-                  >
-                    {" "}
-                    <FaLinkedin />
-                    LinkedIn
-                  </a>
-                  <a
-                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                    href="https://www.github.com/thapabishal21tech/"
-                    target="_blank"
-                  >
-                    {" "}
-                    <FaGithub />
-                    GitHub
-                  </a>
+                  <li>
+                    <a
+                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                      href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
+                      target="_blank"
+                    >
+                      {" "}
+                      <FaLinkedin />
+                      LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                      href="https://www.github.com/thapabishal21tech/"
+                      target="_blank"
+                    >
+                      {" "}
+                      <FaGithub />
+                      GitHub
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                      href="https://www.x.com/"
+                      target="_blank"
+                    >
+                      {" "}
+                      <FaXTwitter />
+                      Twitter
+                    </a>
+                  </li>
 
-                  <a
-                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                    href="https://www.x.com/"
-                    target="_blank"
-                  >
-                    {" "}
-                    <FaXTwitter />
-                    Twitter
-                  </a>
-                  <a
-                    className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                    href="mailto:thapabishal21dev@gmail.com"
-                    target="_blank"
-                  >
-                    {" "}
-                    <MdEmail />
-                    Email
-                  </a>
+                  <li>
+                    <a
+                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                      href="mailto:thapabishal21dev@gmail.com"
+                      target="_blank"
+                    >
+                      {" "}
+                      <MdEmail />
+                      Email
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="">

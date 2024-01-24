@@ -17,21 +17,6 @@ import { motion, Variants } from "framer-motion";
 import { IProject } from "@/app/lib/data/data";
 import { useRouter } from "next/navigation";
 
-const fadeInUpAnimation: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 10,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.5,
-      ease: "easeInOut",
-    },
-  },
-};
-
 const SingleProject = () => {
   const [selectProject, setSelectProject] = useState<IProject>({} as IProject);
   const { userApiData } = useContext(ApiDataContext);
@@ -67,14 +52,9 @@ const SingleProject = () => {
               <div className=" pt-6">
                 <div className=" flex flex-row justify-start items-center gap-8">
                   <div className="">
-                    <motion.h1
-                      initial="hidden"
-                      animate="show"
-                      variants={fadeInUpAnimation}
-                      className="text-2xl  font-bold bg-gradient-to-br to-slate-500 from-neutral-800 text-transparent bg-clip-text dark:bg-bg-gradient-to-br dark:to-slate-100 dark:from-neutral-700"
-                    >
+                    <h1 className="text-2xl  font-bold bg-gradient-to-br to-slate-500 from-neutral-800 text-transparent bg-clip-text dark:bg-bg-gradient-to-br dark:to-slate-100 dark:from-neutral-700">
                       {selectProject.projectTitle}
-                    </motion.h1>
+                    </h1>
                   </div>
                 </div>
                 <div className=" flex flex-row  items-center gap-6 my-4">
@@ -103,12 +83,7 @@ const SingleProject = () => {
                 </div>
               </div>
               {/* bg-[url('/wallpaper.png')]  */}
-              <motion.div
-                initial="hidden"
-                animate="show"
-                variants={fadeInUpAnimation}
-                className=""
-              >
+              <div className="">
                 <div
                   className=" flex justify-center rounded-xl  pattern-dots pattern-gray-500 pattern-bg-white
                 pattern-size-2 pattern-opacity-100 dark:border-slate-300 border-2 "
@@ -158,7 +133,7 @@ const SingleProject = () => {
                     hoverBgColor="hover:bg-neutral-200"
                   />
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         )}

@@ -9,7 +9,6 @@ const Github = () => {
 
   useEffect(() => {
     setIsClient(true);
-    console.log("githubpage");
   }, []);
 
   const [selectedYear, setSelectedYear] = useState<number>();
@@ -45,9 +44,9 @@ const Github = () => {
           </button>
         </div>
         <div className=" border-slate-400 py-4 px-5  rounded-md border-2 mx-2 ">
-          {isClient && (
+          {isClient ? (
             <GitHubCalendar
-              style={{ margin: "6px auto " }}
+              style={{ margin: "6px auto" }}
               username="thapabishal21tech"
               blockSize={10}
               blockMargin={3}
@@ -55,10 +54,18 @@ const Github = () => {
               colorScheme="dark"
               year={selectedYear}
             />
+          ) : (
+            <div>
+              <h1>loading...</h1>
+            </div>
           )}
         </div>
         <h1 className="my-6 text-md italic  underline cursor-pointer text-center text-green-500">
-          <Link href="https://github.com/thapabishal21tech" target="_blank">
+          <Link
+            href="https://github.com/thapabishal21tech"
+            title="visit"
+            target="_blank"
+          >
             thapabishal21tech on Github - {thisYear.getFullYear()}
           </Link>
         </h1>

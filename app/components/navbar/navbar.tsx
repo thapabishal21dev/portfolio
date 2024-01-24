@@ -26,8 +26,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    console.log("navbar");
-
     const handleScroll = (): void => {
       const navbar: INavbarElement | null = document.getElementById("navbar");
 

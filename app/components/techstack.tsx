@@ -15,27 +15,9 @@ const Techstack = (props: ITechStackProps) => {
   const getBorderColor = props.HoverBorderColor;
   const getBgColor = props.hoverBgColor;
 
-  const fadeInUpAnimation: Variants = {
-    hidden: {
-      opacity: 0,
-      y: 10,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <>
-      <motion.div
-        initial="hidden"
-        animate="show"
-        variants={fadeInUpAnimation}
+      <div
         className={` w-fit px-3 py-1 rounded-lg flex flex-row items-center gap-2 cursor-pointer border-2 ${getBorderColor} ${getBgColor} hover:bg-opacity-60 dark:bg-opacity-40 min-h-9 border-2 border-slate-400  `}
       >
         <div>
@@ -48,7 +30,7 @@ const Techstack = (props: ITechStackProps) => {
             {getTechName}
           </p>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };
