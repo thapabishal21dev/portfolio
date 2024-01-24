@@ -40,7 +40,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="  bg-centre bg-[url('/wallpaper.png')]  ">
+      <div className=" bg-centre bg-[url('/wallpaper.png')]  ">
         <div className="flex dark:bg-slate-950 justify-center text-white">
           <div className=" w-full max-w-[780px] mx-auto my-4 flex flex-col">
             <div className=" flex flex-row justify-between mt-10">

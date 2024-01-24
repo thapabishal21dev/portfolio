@@ -17,15 +17,15 @@ const Techstack = (props: ITechStackProps) => {
   return (
     <>
       <div
-        className={` w-fit px-3 py-1 rounded-lg flex flex-row items-center gap-2 cursor-pointer border-2 ${getBorderColor} ${getBgColor} hover:bg-opacity-60 dark:bg-opacity-40 min-h-9 border-2 border-slate-400  `}
+        className={` w-fit px-3 py-1 rounded-md flex flex-row items-center gap-2 cursor-pointer border-1 ${getBorderColor} ${getBgColor} hover:bg-opacity-60 dark:bg-opacity-40 min-h-9  border-[1px] border-slate-500`}
       >
         <div>
-          <p className=" text-md text-neutral-600 dark:text-white ">
+          <p className=" text-lg text-slate-700 dark:text-neutral-300 ">
             {getTechImg}
           </p>
         </div>
         <div>
-          <p className="text-sm text-neutral-600 dark:text-neutral-100 font-medium ">
+          <p className="text-sm text-slate-700 dark:text-neutral-300  font-medium ">
             {getTechName}
           </p>
         </div>
