@@ -5,14 +5,16 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import "./globals.css";
 import { useState } from "react";
+``;
 import { ApiDataContext } from "./context/context";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata: Metadata = {
-  title: "thapabishal portfolio",
+  title: "bishalthapa",
   description: "Developed by bishal thapa",
   keywords: ["Developer", "Portfolio", "Developer Portfolio", "bishal thapa"],
+  icons: [],
 };
 
 export default function RootLayout({

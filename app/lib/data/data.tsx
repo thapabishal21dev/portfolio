@@ -18,6 +18,8 @@ export interface IProject {
   projectBorderColorLight?: string;
   projectBgColorLight?: string;
   projectShadowColorLight?: string;
+  projectTitleColor1st?: string;
+  projectTitleColor2nd?: string;
 }
 
 export const ProjectsList: IProject[] = [
@@ -33,6 +35,8 @@ export const ProjectsList: IProject[] = [
     projectBorderColorLight: "hover:border-green-500",
     projectBgColorLight: "hover:bg-green-100",
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#22c55e]`,
+    projectTitleColor1st: "from-green-400",
+    projectTitleColor2nd: "to-slate-500",
   },
   {
     projectId: 2,
@@ -47,6 +51,8 @@ export const ProjectsList: IProject[] = [
     projectBorderColorLight: "hover:border-blue-500",
     projectBgColorLight: "hover:bg-blue-100",
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#3b82f6]`,
+    projectTitleColor1st: "from-blue-400",
+    projectTitleColor2nd: "to-slate-500",
   },
   {
     projectId: 3,
@@ -60,6 +66,8 @@ export const ProjectsList: IProject[] = [
     projectBorderColorLight: "hover:border-cyan-500",
     projectBgColorLight: "hover:bg-cyan-100",
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#06b6d4]`,
+    projectTitleColor1st: "from-cyan-400",
+    projectTitleColor2nd: "to-slate-500",
   },
   {
     projectId: 4,
@@ -73,6 +81,8 @@ export const ProjectsList: IProject[] = [
     projectBorderColorLight: "hover:border-violet-500",
     projectBgColorLight: "hover:bg-violet-100",
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#8b5cf6]`,
+    projectTitleColor1st: "from-violet-400",
+    projectTitleColor2nd: "to-slate-500",
   },
   {
     projectId: 5,
@@ -86,6 +96,8 @@ export const ProjectsList: IProject[] = [
     projectBorderColorLight: "hover:border-pink-500",
     projectBgColorLight: "hover:bg-pink-100",
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#ec4899]`,
+    projectTitleColor1st: "from-pink-400",
+    projectTitleColor2nd: "to-slate-500",
   },
   {
     projectId: 6,
@@ -99,5 +111,7 @@ export const ProjectsList: IProject[] = [
     projectBorderColorLight: "hover:border-sky-500",
     projectBgColorLight: "hover:bg-sky-100",
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#0ea5e9]`,
+    projectTitleColor1st: "from-sky-400",
+    projectTitleColor2nd: "to-slate-500",
   },
 ];
