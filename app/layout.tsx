@@ -14,7 +14,6 @@ const metadata: Metadata = {
   title: "bishalthapa",
   description: "Developed by bishal thapa",
   keywords: ["Developer", "Portfolio", "Developer Portfolio", "bishal thapa"],
-  icons: [],
 };
 
 export default function RootLayout({
@@ -26,12 +25,14 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.className}dark:dark:bg-slate-950 `}>
-        <ApiDataContext.Provider value={{ userApiData, setUserApiData }}>
-          <Navbar />
-          {children}
-          <Footer />
-        </ApiDataContext.Provider>
+      <body className={`${inter.className} `}>
+        <div className="dark:dark:bg-slate-950  ">
+          <ApiDataContext.Provider value={{ userApiData, setUserApiData }}>
+            <Navbar />
+            {children}
+            <Footer />
+          </ApiDataContext.Provider>
+        </div>
       </body>
     </html>
   );

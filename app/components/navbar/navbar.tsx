@@ -50,10 +50,10 @@ const Navbar = () => {
             <li className=" text-xl rounded-xl p-2">
               <Link href="/">
                 <Image
-                  className="rounded-full w-10"
-                  src="/avatar.png"
-                  width={200}
-                  height={200}
+                  className="w-8 mx-1 hover:text-blue-500 hover:scale-75 transition ease-in-out"
+                  src="/astronaut.png"
+                  width={400}
+                  height={400}
                   alt="avatar"
                   property="priority"
                 />

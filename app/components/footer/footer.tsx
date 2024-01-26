@@ -13,9 +13,10 @@ interface Quote {
   author: string;
 }
 const Footer = () => {
-  const [time, setTime] = useState(new Date());
+  let newDate = new Date();
+  const [time, setTime] = useState(newDate);
   useEffect(() => {
-    const timeId = setInterval(() => setTime(new Date()), 1000);
+    const timeId = setInterval(() => setTime(newDate), 1000);
     return () => {
       clearInterval(timeId);
     };
@@ -25,7 +26,7 @@ const Footer = () => {
     minute: "2-digit",
   });
 
-  const getCurrentYear = time.getFullYear();
+  const getCurrentYear = newDate.getFullYear();
 
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
@@ -40,7 +41,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className=" bg-centre bg-[url('/wallpaper.png')]  ">
+      <div className=" bg-centre bg-[url('/wallpaper.png')]">
         <div className="flex dark:bg-slate-950 justify-center text-white">
           <div className=" w-full max-w-[780px] mx-auto my-4 flex flex-col">
             <div className=" flex flex-row justify-between mt-10">
