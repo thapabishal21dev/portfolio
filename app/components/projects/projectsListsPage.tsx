@@ -12,15 +12,17 @@ const ProjectsListsPage: React.FC = () => {
             Projects
           </h1>
           <div className="flex flex-row flex-wrap gap-10  list-none ">
-            {ProjectsList.map((item, index) => (
-              <li key={index}>
-                <ListProjects
-                  params={item.projectTitle}
-                  projectData={item}
-                  projectId={item.projectId}
-                />
-              </li>
-            ))}
+            <ul>
+              {ProjectsList.map((item, index) => (
+                <li key={index}>
+                  <ListProjects
+                    params={item.projectTitle}
+                    projectData={item}
+                    projectId={item.projectId}
+                  />
+                </li>
+              ))}
+            </ul>
             <div className=" text-md hover:cursor-pointer flex items-center mx-auto my-8">
               <a
                 className=" dark:text-white hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:98%_2px] bg-no-repeat bg-bottom transition hover:translate-x-1"

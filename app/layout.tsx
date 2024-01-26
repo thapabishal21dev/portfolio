@@ -6,7 +6,7 @@ import Footer from "./components/footer/footer";
 import "./globals.css";
 import { useState } from "react";
 ``;
-// import { ApiDataContext } from "./context/context";
+import { ApiDataContext } from "./context/context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,11 +27,11 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <body className={`${inter.className} `}>
         <div className="dark:dark:bg-slate-950  ">
-          {/* <ApiDataContext.Provider value={{ userApiData, setUserApiData }}> */}
-          <Navbar />
-          {children}
-          <Footer />
-          {/* </ApiDataContext.Provider> */}
+          <ApiDataContext.Provider value={{ userApiData, setUserApiData }}>
+            <Navbar />
+            {children}
+            <Footer />
+          </ApiDataContext.Provider>
         </div>
       </body>
     </html>

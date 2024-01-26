@@ -1,3 +1,3 @@
-// import { createContext } from "react";
+import { createContext } from "react";
 
-// export const ApiDataContext = createContext<any>(null);
+export const ApiDataContext = createContext<any>(null);

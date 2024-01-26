@@ -4,37 +4,33 @@ import Link from "next/link";
 import Image from "next/image";
 import { PiArrowLeftLight } from "react-icons/pi";
 import Techstack from "../techstack";
-// import { ApiDataContext } from "@/app/context/context";
+import { ApiDataContext } from "@/app/context/context";
 import { ProjectsList } from "@/app/lib/data/data";
 import { IProject } from "@/app/lib/data/data";
 import { useRouter } from "next/navigation";
 import { RiCodeSSlashLine, RiLinksLine } from "react-icons/ri";
 
 const SingleProject = () => {
-  // const [selectProject, setSelectProject] = useState<IProject>({} as IProject);
-  // const { userApiData } = useContext(ApiDataContext);
+  const [selectProject, setSelectProject] = useState<IProject>({} as IProject);
 
-  // const router = useRouter();
+  //getting value from useContext
+  const { userApiData } = useContext(ApiDataContext);
 
-  // useEffect(() => {
-  //   const foundProjectId = ProjectsList.find(
-  //     (item) => item.projectTitle === userApiData
-  //   );
-  //   if (foundProjectId) {
-  //     setSelectProject(foundProjectId);
-  //   } else {
-  //     router.push("/projects");
-  //     return;
-  //   }
-  // }, [userApiData, router]);
+  const router = useRouter();
+
+  const foundProjectId = ProjectsList.find(
+    (item) => item.projectTitle === userApiData
+  );
+  if (foundProjectId) {
+    setSelectProject(foundProjectId);
+  } else {
+    router.push("/projects");
+    return;
+  }
 
   return (
     <>
       <div>
-        <h1>singleproject</h1>
-      </div>
-
-      {/* <div>
         {selectProject && (
           <div className="  dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-950 to-black flex justify-center dark:text-neutral-300 ">
             <div className=" w-[780px] my-24  ">
@@ -78,7 +74,7 @@ const SingleProject = () => {
                 </div>
               </div>
               {/* bg-[url('/wallpaper.png')]  */}
-      {/* <div>
+              <div>
                 <div className=" flex justify-center">
                   <div className=" dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 bg-gradient-to-r from-slate-200 to-slate-400 rounded px-20 py-16">
                     <Image
@@ -110,7 +106,7 @@ const SingleProject = () => {
             </div>
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 };
