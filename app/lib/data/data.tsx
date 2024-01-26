@@ -4,6 +4,20 @@ import img3 from "@/public/projectImg/img3.png";
 import img4 from "@/public/projectImg/img4.png";
 import img5 from "@/public/projectImg/img5.png";
 import img6 from "@/public/projectImg/img6.png";
+import { SiTypescript } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { RiReactjsFill } from "react-icons/ri";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiReactquery } from "react-icons/si";
+import { FaSass } from "react-icons/fa";
+
+export interface IprojectTechStack {
+  techName?: string;
+  techImg?: any;
+  HoverBorderColor?: string;
+  hoverBgColor?: string;
+}
 
 export interface IProject {
   params?: string;
@@ -20,6 +34,7 @@ export interface IProject {
   projectShadowColorLight?: string;
   projectTitleColor1st?: string;
   projectTitleColor2nd?: string;
+  projectTechStack?: IprojectTechStack[];
 }
 
 export const ProjectsList: IProject[] = [
@@ -37,6 +52,39 @@ export const ProjectsList: IProject[] = [
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#22c55e]`,
     projectTitleColor1st: "from-green-400",
     projectTitleColor2nd: "to-slate-500",
+    projectTechStack: [
+      {
+        techName: "ReactJs",
+        techImg: <RiReactjsFill />,
+        HoverBorderColor: "hover:border-cyan-400",
+        hoverBgColor: "hover:bg-cyan-200",
+      },
+      {
+        techName: "JavaScript",
+        techImg: <IoLogoJavascript />,
+        HoverBorderColor: "hover:border-yellow-400",
+        hoverBgColor: "hover:bg-yellow-200",
+      },
+
+      {
+        techName: "NextJs",
+        techImg: <TbBrandNextjs />,
+        HoverBorderColor: "hover:border-slate-400",
+        hoverBgColor: "hover:bg-slate-200",
+      },
+      {
+        techName: "TypeScript",
+        techImg: <SiTypescript />,
+        HoverBorderColor: "hover:border-blue-400",
+        hoverBgColor: "hover:bg-blue-200",
+      },
+      {
+        techName: "TailwindCSS",
+        techImg: <SiTailwindcss />,
+        HoverBorderColor: "hover:border-green-400",
+        hoverBgColor: "hover:bg-green-200",
+      },
+    ],
   },
   {
     projectId: 2,
@@ -53,6 +101,51 @@ export const ProjectsList: IProject[] = [
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#3b82f6]`,
     projectTitleColor1st: "from-blue-400",
     projectTitleColor2nd: "to-slate-500",
+    projectTechStack: [
+      {
+        techName: "ReactJs",
+        techImg: <RiReactjsFill />,
+        HoverBorderColor: "hover:border-cyan-400",
+        hoverBgColor: "hover:bg-cyan-200",
+      },
+      {
+        techName: "SASS",
+        techImg: <FaSass />,
+        HoverBorderColor: "hover:border-pink-400",
+        hoverBgColor: "hover:bg-pink-200",
+      },
+      {
+        techName: "JavaScript",
+        techImg: <IoLogoJavascript />,
+        HoverBorderColor: "hover:border-yellow-400",
+        hoverBgColor: "hover:bg-yellow-200",
+      },
+
+      {
+        techName: "NextJs",
+        techImg: <TbBrandNextjs />,
+        HoverBorderColor: "hover:border-slate-400",
+        hoverBgColor: "hover:bg-slate-200",
+      },
+      {
+        techName: "ReactQuery",
+        techImg: <SiReactquery />,
+        HoverBorderColor: "hover:border-rose-400",
+        hoverBgColor: "hover:bg-pink-200",
+      },
+      {
+        techName: "TypeScript",
+        techImg: <SiTypescript />,
+        HoverBorderColor: "hover:border-blue-400",
+        hoverBgColor: "hover:bg-blue-200",
+      },
+      {
+        techName: "TailwindCSS",
+        techImg: <SiTailwindcss />,
+        HoverBorderColor: "hover:border-green-400",
+        hoverBgColor: "hover:bg-green-200",
+      },
+    ],
   },
   {
     projectId: 3,
@@ -68,6 +161,20 @@ export const ProjectsList: IProject[] = [
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#06b6d4]`,
     projectTitleColor1st: "from-cyan-400",
     projectTitleColor2nd: "to-slate-500",
+    projectTechStack: [
+      {
+        techName: "ReactJs",
+        techImg: <RiReactjsFill />,
+        HoverBorderColor: "hover:border-cyan-400",
+        hoverBgColor: "hover:bg-cyan-200",
+      },
+      {
+        techName: "JavaScript",
+        techImg: <IoLogoJavascript />,
+        HoverBorderColor: "hover:border-yellow-400",
+        hoverBgColor: "hover:bg-yellow-200",
+      },
+    ],
   },
   {
     projectId: 4,
@@ -83,6 +190,27 @@ export const ProjectsList: IProject[] = [
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#8b5cf6]`,
     projectTitleColor1st: "from-violet-400",
     projectTitleColor2nd: "to-slate-500",
+    projectTechStack: [
+      {
+        techName: "ReactJs",
+        techImg: <RiReactjsFill />,
+        HoverBorderColor: "hover:border-cyan-400",
+        hoverBgColor: "hover:bg-cyan-200",
+      },
+      {
+        techName: "JavaScript",
+        techImg: <IoLogoJavascript />,
+        HoverBorderColor: "hover:border-yellow-400",
+        hoverBgColor: "hover:bg-yellow-200",
+      },
+
+      {
+        techName: "NextJs",
+        techImg: <TbBrandNextjs />,
+        HoverBorderColor: "hover:border-slate-400",
+        hoverBgColor: "hover:bg-slate-200",
+      },
+    ],
   },
   {
     projectId: 5,
@@ -98,6 +226,32 @@ export const ProjectsList: IProject[] = [
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#ec4899]`,
     projectTitleColor1st: "from-pink-400",
     projectTitleColor2nd: "to-slate-500",
+    projectTechStack: [
+      {
+        techName: "ReactJs",
+        techImg: <RiReactjsFill />,
+        HoverBorderColor: "hover:border-cyan-400",
+        hoverBgColor: "hover:bg-cyan-200",
+      },
+      {
+        techName: "JavaScript",
+        techImg: <IoLogoJavascript />,
+        HoverBorderColor: "hover:border-yellow-400",
+        hoverBgColor: "hover:bg-yellow-200",
+      },
+      {
+        techName: "TypeScript",
+        techImg: <SiTypescript />,
+        HoverBorderColor: "hover:border-blue-400",
+        hoverBgColor: "hover:bg-blue-200",
+      },
+      {
+        techName: "TailwindCSS",
+        techImg: <SiTailwindcss />,
+        HoverBorderColor: "hover:border-green-400",
+        hoverBgColor: "hover:bg-green-200",
+      },
+    ],
   },
   {
     projectId: 6,
@@ -113,5 +267,25 @@ export const ProjectsList: IProject[] = [
     projectShadowColorLight: `hover:drop-shadow-[0_0_6px_#0ea5e9]`,
     projectTitleColor1st: "from-sky-400",
     projectTitleColor2nd: "to-slate-500",
+    projectTechStack: [
+      {
+        techName: "ReactJs",
+        techImg: <RiReactjsFill />,
+        HoverBorderColor: "hover:border-cyan-400",
+        hoverBgColor: "hover:bg-cyan-200",
+      },
+      {
+        techName: "SASS",
+        techImg: <FaSass />,
+        HoverBorderColor: "hover:border-pink-400",
+        hoverBgColor: "hover:bg-pink-200",
+      },
+      {
+        techName: "JavaScript",
+        techImg: <IoLogoJavascript />,
+        HoverBorderColor: "hover:border-yellow-400",
+        hoverBgColor: "hover:bg-yellow-200",
+      },
+    ],
   },
 ];

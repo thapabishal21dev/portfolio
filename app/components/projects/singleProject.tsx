@@ -3,19 +3,12 @@ import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { PiArrowLeftLight } from "react-icons/pi";
-import { FaGithub } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
 import Techstack from "../techstack";
-import { SiTypescript } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
-import { RiReactjsFill } from "react-icons/ri";
-import { SiVercel } from "react-icons/si";
 import { ApiDataContext } from "@/app/context/context";
 import { ProjectsList } from "@/app/lib/data/data";
 import { IProject } from "@/app/lib/data/data";
 import { useRouter } from "next/navigation";
-import { RiArrowLeftLine, RiCodeSSlashLine, RiLinksLine } from "react-icons/ri";
+import { RiCodeSSlashLine, RiLinksLine } from "react-icons/ri";
 
 const SingleProject = () => {
   const [selectProject, setSelectProject] = useState<IProject>({} as IProject);
@@ -25,7 +18,7 @@ const SingleProject = () => {
 
   useEffect(() => {
     const foundProjectId = ProjectsList.find(
-      (item) => item.projectId === userApiData
+      (item) => item.projectTitle === userApiData
     );
     if (foundProjectId) {
       setSelectProject(foundProjectId);
@@ -96,39 +89,18 @@ const SingleProject = () => {
                 </div>
                 <div className=" text-justify flex py-6">
                   <p>{selectProject.projectDescription}</p>
-                </div>
-                <div className="  flex flex-row gap-4 ">
-                  <Techstack
-                    techName={"TypeScript"}
-                    techImg={<SiTypescript />}
-                    HoverBorderColor="hover:border-blue-400"
-                    hoverBgColor="hover:bg-blue-200"
-                  />
-                  <Techstack
-                    techName={"ReactJs"}
-                    techImg={<RiReactjsFill />}
-                    HoverBorderColor="hover:border-cyan-400"
-                    hoverBgColor="hover:bg-cyan-200"
-                  />
-                  <Techstack
-                    techName={"NextJs"}
-                    techImg={<TbBrandNextjs />}
-                    HoverBorderColor="hover:border-blue-400"
-                    hoverBgColor="hover:bg-blue-200"
-                  />
-
-                  <Techstack
-                    techName={"TailwindCSS"}
-                    techImg={<SiTailwindcss />}
-                    HoverBorderColor="hover:border-green-400"
-                    hoverBgColor="hover:bg-green-200"
-                  />
-                  <Techstack
-                    techName={"Vercel"}
-                    techImg={<SiVercel />}
-                    HoverBorderColor="hover:border-neutral-400"
-                    hoverBgColor="hover:bg-neutral-200"
-                  />
+                </div>{" "}
+                <div className="  flex flex-row flex-wrap gap-4 ">
+                  {selectProject.projectTechStack?.map((newItem, index) => (
+                    <div key={index}>
+                      <Techstack
+                        techName={newItem.techName}
+                        techImg={newItem.techImg}
+                        hoverBgColor={newItem.hoverBgColor}
+                        HoverBorderColor={newItem.HoverBorderColor}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

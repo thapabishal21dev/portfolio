@@ -3,9 +3,9 @@ import React from "react";
 
 interface ITechStackProps {
   techName?: string;
-  techImg: any;
-  HoverBorderColor: string;
-  hoverBgColor: string;
+  techImg?: any;
+  HoverBorderColor?: string;
+  hoverBgColor?: string;
 }
 
 const Techstack = (props: ITechStackProps) => {
@@ -17,10 +17,10 @@ const Techstack = (props: ITechStackProps) => {
   return (
     <>
       <div
-        className={` w-fit px-3 py-1 rounded-md flex flex-row items-center gap-2 cursor-pointer border-1 ${getBorderColor} ${getBgColor} hover:bg-opacity-60 dark:bg-opacity-40 min-h-9  border-[1px] border-slate-500`}
+        className={` w-fit px-3 py-1 rounded-md flex flex-row  items-center gap-2 cursor-pointer border-1 ${getBorderColor} ${getBgColor} hover:bg-opacity-60 dark:bg-opacity-40 min-h-9  border-[1px] border-slate-500`}
       >
         <div>
-          <p className=" text-lg text-slate-700 dark:text-neutral-300 ">
+          <p className=" text-[18px] text-slate-700 dark:text-neutral-300 ">
             {getTechImg}
           </p>
         </div>

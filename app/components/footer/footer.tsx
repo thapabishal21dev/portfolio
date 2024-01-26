@@ -13,20 +13,20 @@ interface Quote {
   author: string;
 }
 const Footer = () => {
-  let newDate = new Date();
-  const [time, setTime] = useState(newDate);
-  useEffect(() => {
-    const timeId = setInterval(() => setTime(newDate), 1000);
-    return () => {
-      clearInterval(timeId);
-    };
-  });
-  const formattedTime = time.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  // let newDate = new Date();
+  // const [time, setTime] = useState(newDate);
+  // useEffect(() => {
+  //   const timeId = setInterval(() => setTime(newDate), 1000);
+  //   return () => {
+  //     clearInterval(timeId);
+  //   };
+  // }, [newDate]);
+  // const formattedTime = time.toLocaleTimeString([], {
+  //   hour: "2-digit",
+  //   minute: "2-digit",
+  // });
 
-  const getCurrentYear = newDate.getFullYear();
+  // const getCurrentYear = newDate.getFullYear();
 
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
@@ -160,7 +160,7 @@ const Footer = () => {
                   <p>
                     <FaClock />
                   </p>
-                  <p>{`${formattedTime} Kathmandu,Nepal`}</p>
+                  {/* <p>{`${formattedTime} Kathmandu,Nepal`}</p> */}
                 </div>
               </div>
             </div>
@@ -207,7 +207,7 @@ const Footer = () => {
                       BISHAL THAPA.
                       <i className="devicon-flutter-plain colored"></i>
                     </span>{" "}
-                    All rights reserved &copy; {getCurrentYear}.
+                    {/* All rights reserved &copy; {getCurrentYear}. */}
                   </h1>
                 </div>
               </div>

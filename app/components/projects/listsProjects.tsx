@@ -9,23 +9,18 @@ export interface IPropsProjectList {
   projectId: number | undefined;
 }
 
-const ListProjects = ({
-  params,
-  projectData,
-  projectId,
-}: IPropsProjectList) => {
+const ListProjects = ({ params, projectData }: IPropsProjectList) => {
   const { setUserApiData } = useContext(ApiDataContext);
 
   const handleClick = () => {
-    setUserApiData(projectId);
+    setUserApiData(params);
   };
 
   return (
     <>
       <div>
-        <Link href={`/projects/${params}`}>
+        <Link href={`/projects/${params}`} onClick={handleClick}>
           <div
-            onClick={handleClick}
             className={`cursor-pointer space-y-2 overflow-hidden  border-base-800 border-2 dark:border-slate-600 dark:hover:border-2 dark:hover:bg-gradient-to-br from-base-900 to-base-900/80 ${projectData.projectBorderColor} ${projectData.projectShadowColor} ${projectData.projectBorderColorLight} ${projectData.projectBgColorLight} ${projectData.projectShadowColorLight} bg-slate-100 transition duration-300  flex flex-row items-center w-[370px] h-[100px] dark:bg-slate-950 hover:translate-x-[-5px]  hover:translate-y-[-5px] ease-out px-6 dark:text-slate-400 rounded-xl `}
           >
             {" "}

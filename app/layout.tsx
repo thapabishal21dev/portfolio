@@ -21,7 +21,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [userApiData, setUserApiData] = useState<number | undefined>();
+  const [userApiData, setUserApiData] = useState<string | undefined>();
 
   return (
     <html lang="en" className="dark scroll-smooth">
