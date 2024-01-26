@@ -97,6 +97,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// <nav className=" fixed top-2 mt-2 z-50  w-[780px] bg-slate-400 h-14 backdrop-blur-[6px] dark:backdrop-blur-[6px]  dark:bg-opacity-90 border-1 bg-opacity-40  transition-all duration-500 ease-out delay-0">
-//           <ul className=" text-[16px]  text-black gap-8  dark:text-slate-500 dark:bg-gray-800 min-[640px]:flex font-medium items-center"></ul>

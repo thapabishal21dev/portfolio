@@ -20,7 +20,7 @@ const Footer = () => {
   //   return () => {
   //     clearInterval(timeId);
   //   };
-  // }, [newDate]);
+  // }, []);
   // const formattedTime = time.toLocaleTimeString([], {
   //   hour: "2-digit",
   //   minute: "2-digit",

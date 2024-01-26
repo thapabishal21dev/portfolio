@@ -1,5 +1,5 @@
 "use client";
-import { ApiDataContext } from "@/app/context/context";
+// import { ApiDataContext } from "@/app/context/context";
 import { useContext } from "react";
 import Link from "next/link";
 
@@ -10,10 +10,10 @@ export interface IPropsProjectList {
 }
 
 const ListProjects = ({ params, projectData }: IPropsProjectList) => {
-  const { setUserApiData } = useContext(ApiDataContext);
+  // const { setUserApiData } = useContext(ApiDataContext);
 
   const handleClick = () => {
-    setUserApiData(params);
+    // setUserApiData(params);
   };
 
   return (
