@@ -12,21 +12,20 @@ import { RiCodeSSlashLine, RiLinksLine } from "react-icons/ri";
 
 const SingleProject = () => {
   const [selectProject, setSelectProject] = useState<IProject>({} as IProject);
-
-  //getting value from useContext
   const { userApiData } = useContext(ApiDataContext);
-
   const router = useRouter();
 
-  const foundProjectId = ProjectsList.find(
-    (item) => item.projectTitle === userApiData
-  );
-  if (foundProjectId) {
-    setSelectProject(foundProjectId);
-  } else {
-    router.push("/projects");
-    return;
-  }
+  useEffect(() => {
+    const foundProjectId = ProjectsList.find(
+      (item) => item.projectTitle === userApiData
+    );
+
+    if (foundProjectId) {
+      setSelectProject(foundProjectId);
+    } else {
+      router.push("/projects");
+    }
+  }, [userApiData, router]);
 
   return (
     <>
@@ -73,7 +72,6 @@ const SingleProject = () => {
                   </div>
                 </div>
               </div>
-              {/* bg-[url('/wallpaper.png')]  */}
               <div>
                 <div className=" flex justify-center">
                   <div className=" dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 bg-gradient-to-r from-slate-200 to-slate-400 rounded px-20 py-16">

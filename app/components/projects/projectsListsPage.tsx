@@ -11,8 +11,8 @@ const ProjectsListsPage: React.FC = () => {
           <h1 className="text-2xl font-bold bg-gradient-to-br to-slate-600 from-slate-900 text-transparent bg-clip-text dark:bg-bg-gradient-to-br dark:to-slate-950 dark:from-slate-100 pt-12 pb-6 ">
             Projects
           </h1>
-          <div className="flex flex-row flex-wrap gap-10  list-none ">
-            <ul>
+          <div>
+            <ul className="flex flex-row flex-wrap gap-10 list-none ">
               {ProjectsList.map((item, index) => (
                 <li key={index}>
                   <ListProjects
