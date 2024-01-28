@@ -44,14 +44,14 @@ const Footer = () => {
     <>
       <div className=" bg-centre bg-[url('/wallpaper.png')]">
         <div className="dark:bg-slate-950  flex justify-center text-white">
-          <div className=" w-[780px] md:w-[650px] sm:w-full md:px-4 ">
+          <div className=" w-[780px] md:w-[650px] sm:w-full px-4  ">
             <div className=" flex flex-row sm:flex-col justify-between ">
               <div className=" flex flex-row gap-40 md:gap-14 sm:gap-0 sm:justify-between mx-20 ">
                 <div>
-                  <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
+                  <h1 className=" dark:text-neutral-400  text-center font-bold text-sm my-5">
                     PAGES
                   </h1>
-                  <ul className="flex flex-col text-[1rem] gap-4 ">
+                  <ul className="flex flex-col text-[1rem] gap-4 items-center ">
                     <li>
                       <Link
                         className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
@@ -87,10 +87,10 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div>
-                  <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
+                  <h1 className=" dark:text-neutral-400 text-center font-bold text-sm my-5">
                     SOCIAL
                   </h1>
-                  <ul className="flex flex-col gap-4 dark:text-white ">
+                  <ul className="flex flex-col gap-4 items-center dark:text-white ">
                     <li>
                       <a
                         className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
