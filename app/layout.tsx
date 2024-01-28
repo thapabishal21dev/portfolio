@@ -25,7 +25,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark scroll-smooth  ">
-      <body className={`${inter.className} `}>
+      <body className={`${inter.className} dark:bg-slate-950 `}>
         <div className="">
           <ApiDataContext.Provider value={{ userApiData, setUserApiData }}>
             <Navbar />
