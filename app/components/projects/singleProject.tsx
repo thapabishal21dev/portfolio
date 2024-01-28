@@ -32,7 +32,7 @@ const SingleProject = () => {
       <div>
         {selectProject && (
           <div className="  dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-950 to-black flex justify-center dark:text-neutral-300 ">
-            <div className=" w-[780px] my-24  ">
+            <div className=" w-[780px] my-24 md:w-[650px] sm:w-full px-4  ">
               <Link href="/projects">
                 <button className=" text-sm flex flex-row items-center gap-1 border-2 dark:border-slate-800 border-neutral-300  hover:bg-neutral-100 dark:hover:bg-gray-800 rounded-2xl px-3 py-1">
                   <PiArrowLeftLight />
@@ -74,7 +74,7 @@ const SingleProject = () => {
               </div>
               <div>
                 <div className=" flex justify-center">
-                  <div className=" dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 bg-gradient-to-r from-slate-200 to-slate-400 rounded px-20 py-16">
+                  <div className=" dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 bg-gradient-to-r from-slate-200 to-slate-400 rounded px-20 py-16 md:p-12 sm:p-6">
                     <Image
                       className="border-2 rounded-xl border-gray-200"
                       width={1000}
@@ -85,7 +85,7 @@ const SingleProject = () => {
                     />
                   </div>
                 </div>
-                <div className=" text-justify flex py-6">
+                <div className="  flex py-6">
                   <p>{selectProject.projectDescription}</p>
                 </div>{" "}
                 <div className="  flex flex-row flex-wrap gap-4 ">

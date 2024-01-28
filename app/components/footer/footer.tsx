@@ -43,125 +43,129 @@ const Footer = () => {
   return (
     <>
       <div className=" bg-centre bg-[url('/wallpaper.png')]">
-        <div className="flex dark:bg-slate-950 justify-center text-white">
-          <div className=" w-full max-w-[780px] mx-auto my-4 flex flex-col">
-            <div className=" flex flex-row justify-between mt-10">
-              <div>
-                <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
-                  PAGES
-                </h1>
-                <ul className="flex flex-col text-[1rem] gap-4 ">
-                  <li>
-                    <Link
-                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
-                      href="/"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
-                      href="/about"
-                    >
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
-                      href="/projects"
-                    >
-                      Projects
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
-                      href="/blog"
-                    >
-                      Blog
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
-                  SOCIAL
-                </h1>
-                <ul className="flex flex-col gap-4 dark:text-white ">
-                  <li>
-                    <a
-                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                      href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
-                      target="_blank"
-                    >
-                      {" "}
-                      <FaLinkedin />
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                      href="https://www.github.com/thapabishal21tech/"
-                      target="_blank"
-                    >
-                      {" "}
-                      <FaGithub />
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                      href="https://www.x.com/"
-                      target="_blank"
-                    >
-                      {" "}
-                      <FaXTwitter />
-                      Twitter
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
-                      href="mailto:thapabishal21dev@gmail.com"
-                      target="_blank"
-                    >
-                      {" "}
-                      <MdEmail />
-                      Email
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="">
-                <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
-                  THOUGHT OF THE DAY
-                </h1>
-                <div className="  w-[300px] text-sm text-blue-200 italic pb-2 ">
-                  {quotes.length ? (
-                    <div>
-                      {quotes.map((quote) => (
-                        <div key={quote._id} className=" gap-2 flex flex-col">
-                          <p>{`❛❛ ${quote.content} ❜❜`}</p>
-                          <p className="text-yellow-500">-{quote.author}</p>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div>
-                      <p>loading...</p>
-                    </div>
-                  )}
+        <div className="dark:bg-slate-950  flex justify-center text-white">
+          <div className=" w-[780px] md:w-[650px] sm:w-full md:px-4 ">
+            <div className=" flex flex-row sm:flex-col justify-between ">
+              <div className=" flex flex-row gap-40 md:gap-14 sm:gap-0 sm:justify-between mx-20 ">
+                <div>
+                  <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
+                    PAGES
+                  </h1>
+                  <ul className="flex flex-col text-[1rem] gap-4 ">
+                    <li>
+                      <Link
+                        className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
+                        href="/"
+                      >
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
+                        href="/about"
+                      >
+                        About
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
+                        href="/projects"
+                      >
+                        Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className=" dark:text-white hover:underline hover:underline-offset-2 dark:hover:text-slate-300"
+                        href="/blog"
+                      >
+                        Blog
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
-                <div className=" flex flex-row items-center gap-2 text-sm text-slate-200 font-bold">
-                  <p>
-                    <FaClock />
-                  </p>
-                  <p>{`${formattedTime} Kathmandu,Nepal`}</p>
+                <div>
+                  <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
+                    SOCIAL
+                  </h1>
+                  <ul className="flex flex-col gap-4 dark:text-white ">
+                    <li>
+                      <a
+                        className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                        href="https://www.linkedin.com/in/thapa-bishal-64340622a/"
+                        target="_blank"
+                      >
+                        {" "}
+                        <FaLinkedin />
+                        LinkedIn
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                        href="https://www.github.com/thapabishal21tech/"
+                        target="_blank"
+                      >
+                        {" "}
+                        <FaGithub />
+                        GitHub
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                        href="https://www.x.com/"
+                        target="_blank"
+                      >
+                        {" "}
+                        <FaXTwitter />
+                        Twitter
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        className=" hover:text-slate-300 hover:underline hover:underline-offset-2 flex flex-row items-center gap-2"
+                        href="mailto:thapabishal21dev@gmail.com"
+                        target="_blank"
+                      >
+                        {" "}
+                        <MdEmail />
+                        Email
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="  flex justify-center">
+                <div className=" sm:text-center">
+                  <h1 className=" dark:text-neutral-400 font-bold text-sm my-5">
+                    THOUGHT OF THE DAY
+                  </h1>
+                  <div className="  w-[300px] md:w-fit text-sm text-blue-200 italic pb-2 ">
+                    {quotes.length ? (
+                      <div>
+                        {quotes.map((quote) => (
+                          <div key={quote._id} className=" gap-2 flex flex-col">
+                            <p>{`❛❛ ${quote.content} ❜❜`}</p>
+                            <p className="text-yellow-500">-{quote.author}</p>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div>
+                        <p>loading...</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className=" flex flex-row sm:justify-center items-center gap-2 text-sm text-slate-200 font-bold">
+                    <p>
+                      <FaClock />
+                    </p>
+                    <p>{`${formattedTime} Kathmandu,Nepal`}</p>
+                  </div>
                 </div>
               </div>
             </div>

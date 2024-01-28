@@ -24,9 +24,9 @@ export default function RootLayout({
   const [userApiData, setUserApiData] = useState<string | undefined>();
 
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth  ">
       <body className={`${inter.className} `}>
-        <div className="dark:dark:bg-slate-950  ">
+        <div className="lg:dark:dark:bg-slate-950 sm:dark:bg-blue-800 md:dark:bg-gray-700   ">
           <ApiDataContext.Provider value={{ userApiData, setUserApiData }}>
             <Navbar />
             {children}

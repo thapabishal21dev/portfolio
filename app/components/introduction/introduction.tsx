@@ -10,10 +10,10 @@ import { IoPersonSharp } from "react-icons/io5";
 const Introduction = () => {
   return (
     <>
-      <div className=" relative dark:bg-slate-950 text-black dark:text-white z-10 flex justify-center ">
-        <div className=" mt-20 w-[780px] ">
+      <div className=" relative  text-black dark:text-white z-10 flex justify-center ">
+        <div className=" mt-20 w-[780px] md:w-[650px] sm:w-full px-4">
           <div className="flex flex-col justify-between  ">
-            <div className=" flex flex-row mt-12 justify-between">
+            <div className=" flex flex-row sm:flex-col-reverse gap-4 mt-12 justify-between">
               <div className=" flex flex-col">
                 <div>
                   <h1 className=" text-5xl bg-gradient-to-r from-[#777777] to-[#003cff]  inline-block text-transparent bg-clip-text font-extrabold ">
@@ -48,8 +48,8 @@ const Introduction = () => {
                 />
               </div>
             </div>
-            <div className="flex dark:text-white flex-col  font-medium text-[16px] text-black mt-4">
-              <p className=" w-[520px]">
+            <div className="flex dark:text-white flex-col sm:justify-center font-medium text-[16px] text-black mt-4">
+              <p className=" md:w-[520px] sm:w-full  ">
                 Motivated Junior React Developer with knowledge in JavaScript
                 (ES6), ReactJS , Nextjs and many others Frontend Techstack.
                 Dedicated to delivering high-quality, responsive user interfaces
@@ -59,7 +59,7 @@ const Introduction = () => {
                 development.
               </p>
             </div>
-            <div className=" flex flex-row gap-4 my-4 items-center">
+            <div className=" flex flex-row flex-wrap gap-4 my-4 items-center">
               <Link href="/about">
                 {" "}
                 <button className=" flex flex-row gap-2 items-center bg-[#1d50a3] rounded-lg text-white px-2 py-2 hover:bg-blue-700 text-md ">
