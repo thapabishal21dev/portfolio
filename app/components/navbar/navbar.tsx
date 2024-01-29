@@ -14,17 +14,20 @@ interface INavbarElement {
 }
 
 const Navbar = () => {
-  const [isClicked, setIsClicked] = useState(true);
+  const [isClickedTheme, setIsClickedTheme] = useState(true);
 
   const toggleDarkMode = () => {
-    setIsClicked(!isClicked);
+    const getThemeValue = localStorage.getItem("theme");
+    setIsClickedTheme(!isClickedTheme);
 
-    if (!isClicked) {
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
+    const isDarkMode = getThemeValue === "dark";
+
+    if (isDarkMode) {
       localStorage.removeItem("theme");
       document.documentElement.classList.remove("dark");
+    } else {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
     }
   };
 
@@ -41,15 +44,13 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    localStorage.setItem("theme", "dark");
     const handleScroll = (): void => {
       const navbar: INavbarElement | null = document.getElementById("navbar");
 
-      if (navbar) {
+      if (navbar && !IsNavClick) {
         const isScrolled: boolean = window.scrollY > 500;
         navbar.classList.toggle("translate-y-[-100%]", isScrolled);
-      } else if (IsNavClick) {
-        document.body.style.overflowY = "hidden";
-        document.body.classList.add("max-tablet-sm:overflow-hidden");
       }
     };
 
@@ -94,7 +95,7 @@ const Navbar = () => {
                     className=" bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
                     onClick={toggleDarkMode}
                   >
-                    {isClicked ? (
+                    {isClickedTheme ? (
                       <div className="text-white gap-2 items-center flex flex-row">
                         <span className=" text-xl">
                           <FaSun />
@@ -176,7 +177,7 @@ const Navbar = () => {
                 className=" bg-slate-800 ml-20 md:ml-0 md:mx-4 w-30 bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
                 onClick={toggleDarkMode}
               >
-                {isClicked ? (
+                {isClickedTheme ? (
                   <div className="text-white gap-2 items-center flex flex-row text-[18px]">
                     <FaSun />
                     <span className=" text-[14px] text-white gap-4 items-center flex flex-row ">
