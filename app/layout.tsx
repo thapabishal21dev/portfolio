@@ -22,12 +22,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [userApiData, setUserApiData] = useState<string | undefined>();
+  const [isNavLinkClicked, setIsLinkClicked] = useState<boolean>(false);
 
   return (
     <html lang="en" className="dark scroll-smooth ">
       <body className={`${inter.className}  dark:bg-slate-950 `}>
         <div className="  ">
-          <ApiDataContext.Provider value={{ userApiData, setUserApiData }}>
+          <ApiDataContext.Provider
+            value={{
+              userApiData,
+              setUserApiData,
+              isNavLinkClicked,
+              setIsLinkClicked,
+            }}
+          >
             <Navbar />
             {children}
             <Footer />

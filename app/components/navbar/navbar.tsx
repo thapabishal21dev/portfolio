@@ -6,7 +6,6 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import MobileNav from "../mblnav";
-
 interface INavbarElement {
   classList: {
     toggle: (className: string, force?: boolean) => void;
@@ -31,10 +30,20 @@ const Navbar = () => {
     }
   };
 
-  const [IsNavClick, setIsNavClick] = useState<boolean>(false);
+  const applyThemeOnLoad = () => {
+    const savedTheme = localStorage.getItem("theme");
+    setIsClickedTheme(savedTheme === "dark");
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+  };
+
+  useEffect(() => {
+    applyThemeOnLoad();
+  }, []);
+
+  const [ismblNavIcon, setIsmblNavIcon] = useState<boolean>(false);
 
   const handleClickNav = () => {
-    setIsNavClick(!IsNavClick);
+    setIsmblNavIcon(!ismblNavIcon);
   };
 
   const [showNavModal, setShowNavModal] = useState(false);
@@ -44,11 +53,11 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("theme", "dark");
+    applyThemeOnLoad();
     const handleScroll = (): void => {
       const navbar: INavbarElement | null = document.getElementById("navbar");
 
-      if (navbar && !IsNavClick) {
+      if (navbar) {
         const isScrolled: boolean = window.scrollY > 500;
         navbar.classList.toggle("translate-y-[-100%]", isScrolled);
       }
@@ -59,7 +68,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [IsNavClick]);
+  }, []);
 
   return (
     <>
@@ -69,7 +78,7 @@ const Navbar = () => {
       >
         <div
           className={` ${
-            IsNavClick
+            ismblNavIcon
               ? "mt-0 mx-0 flex flex-col px-3 py-2 border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-950 backdrop-blur-[6px] dark:backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50 dark:bg-opacity-70 "
               : "mt-4 mx-2 flex flex-col rounded-xl px-3 py-2 border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-950 backdrop-blur-[6px] dark:backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50 dark:bg-opacity-70 "
           }`}
@@ -115,7 +124,7 @@ const Navbar = () => {
                   </button>
                 </div>{" "}
                 <div className="cursor-pointer ">
-                  {IsNavClick ? (
+                  {ismblNavIcon ? (
                     <div
                       className="text-3xl transition duration-900 ease-in-out cursor-pointer"
                       onClick={handleClickNav}
@@ -134,9 +143,9 @@ const Navbar = () => {
               </div>
             </div>
             <div className=" flex justify-center">
-              {IsNavClick ? (
-                <div className=" overflow-y-hidden ">
-                  <MobileNav />
+              {ismblNavIcon ? (
+                <div className="overflow-y-hidden">
+                  <MobileNav setIsmblNavIcon={setIsmblNavIcon} />
                 </div>
               ) : (
                 <div></div>
