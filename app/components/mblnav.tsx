@@ -4,9 +4,9 @@ import React from "react";
 const MobileNav = () => {
   return (
     <div>
-      <div className=" fixed z-1000 overflow-hidden">
-        <ul className="text-xl py-12 h-screen w-screen flex-col gap-8 dark:text-slate-300 flex font-medium items-center backdrop-blur-lg bg-slate-950/30">
-          <li className=" dark:hover:text-cyan-600 hover:text-cyan-500 hover:underline hover:underline-offset-2  p-2">
+      <div className="text-black dark:text-white h-screen w-screen ">
+        <ul className="text-xl py-12 flex-col gap-8 flex font-medium items-center">
+          <li className=" dark:hover:text-cyan-600 hover:text-cyan-500 hover:underline hover:underline-offset-2 p-2">
             <Link href="/about">About</Link>
           </li>
           <li className=" hover:text-blue-600 hover:underline hover:underline-offset-2 dark:hover:blue-slate-600 p-2">

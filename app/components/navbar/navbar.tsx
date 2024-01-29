@@ -34,8 +34,6 @@ const Navbar = () => {
     setIsNavClick(!IsNavClick);
   };
 
-  //navbar modal
-
   const [showNavModal, setShowNavModal] = useState(false);
 
   const handleClose = () => {
@@ -49,6 +47,9 @@ const Navbar = () => {
       if (navbar) {
         const isScrolled: boolean = window.scrollY > 500;
         navbar.classList.toggle("translate-y-[-100%]", isScrolled);
+      } else if (IsNavClick) {
+        document.body.style.overflowY = "hidden";
+        document.body.classList.add("max-tablet-sm:overflow-hidden");
       }
     };
 
@@ -57,70 +58,95 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [IsNavClick]);
 
-  // <nav className=" fixed border-2 border-slate-200 dark:border-slate-700 top-2 z-50 bg-[#e3edfe] dark:bg-slate-950  backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
   return (
     <>
-      <div id="navbar" className=" fixed dark:text-white w-full">
-        <div className=" rounded-xl top-4 px-3 py-2  border-2 border-slate-200 dark:border-slate-700 z-50 bg-[#e3edfe] dark:bg-slate-950  backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50 ">
-          <div className=" flex sm:bg-green-500 md:bg-red-500 justify-between items-center">
-            <div className=" flex flex-row gap-1 items-center dark:hover:bg-slate-800 px-3 py-2 hover:rounded-xl hover:cursor-pointer hover:bg-slate-200">
+      <div
+        id="navbar"
+        className=" fixed z-50 dark:text-white w-full lg:hidden "
+      >
+        <div
+          className={` ${
+            IsNavClick
+              ? "mt-0 mx-0 flex flex-col px-3 py-2 border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-950 backdrop-blur-[6px] dark:backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50 dark:bg-opacity-70 "
+              : "mt-4 mx-2 flex flex-col rounded-xl px-3 py-2 border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-950 backdrop-blur-[6px] dark:backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50 dark:bg-opacity-70 "
+          }`}
+        >
+          <div>
+            <div className=" flex justify-between items-center">
               <Link href="/">
-                <Image
-                  className="w-6 mx-1 hover:text-blue-500 hover:scale-75 transition ease-in-out"
-                  src="/astronaut.png"
-                  width={400}
-                  height={400}
-                  alt="avatar"
-                  property="priority"
-                />
+                <div className=" flex flex-row gap-1 items-center dark:hover:bg-slate-900 px-3 py-2 hover:rounded-lg hover:cursor-pointer hover:bg-slate-200 transition rounded-lg delay-25 ease-in-out">
+                  <Image
+                    className="w-6 mx-1 hover:text-blue-500 hover:scale-75 transition ease-in-out"
+                    src="/astronaut.png"
+                    width={400}
+                    height={400}
+                    alt="avatar"
+                    property="priority"
+                  />
+                  <span className=" text-lg font-mono">Astronaut</span>
+                </div>
               </Link>
-              <span className=" text-xl font-mono">Astronaut</span>
-            </div>
-            <div className=" flex gap-4">
-              <div className="">
-                <button
-                  className=" bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
-                  onClick={toggleDarkMode}
-                >
-                  {isClicked ? (
-                    <div className="text-white gap-2 items-center flex flex-row">
-                      <span className=" text-xl">
-                        <FaSun />
-                      </span>
-                      <span className=" sm:hidden text-sm text-white gap-4 items-center flex flex-row ">
-                        Light Mode
-                      </span>
+              <div className=" flex gap-4">
+                <div className="">
+                  <button
+                    className=" bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
+                    onClick={toggleDarkMode}
+                  >
+                    {isClicked ? (
+                      <div className="text-white gap-2 items-center flex flex-row">
+                        <span className=" text-xl">
+                          <FaSun />
+                        </span>
+                        <span className=" sm:hidden text-sm text-white gap-4 items-center flex flex-row ">
+                          Light Mode
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="  text-black  gap-2 items-center flex flex-row  ">
+                        <span className=" text-xl">
+                          <FaMoon />
+                        </span>
+                        <span className="sm:hidden text-sm">Dark Mode</span>
+                      </div>
+                    )}
+                  </button>
+                </div>{" "}
+                <div className="cursor-pointer ">
+                  {IsNavClick ? (
+                    <div
+                      className="text-3xl transition duration-900 ease-in-out cursor-pointer"
+                      onClick={handleClickNav}
+                    >
+                      <RxCross2 />
                     </div>
                   ) : (
-                    <div className="  text-black  gap-2 items-center flex flex-row  ">
-                      <span className=" text-xl">
-                        <FaMoon />
-                      </span>
-                      <span className="sm:hidden text-sm">Dark Mode</span>
+                    <div
+                      className="text-3xl transition duration-900 ease-in-out cursor-pointer"
+                      onClick={handleClickNav}
+                    >
+                      <HiOutlineBars3 />
                     </div>
                   )}
-                </button>
-              </div>{" "}
-              <div className="">
-                {IsNavClick ? (
-                  <div className=" text-3xl" onClick={handleClickNav}>
-                    <RxCross2 />
-                  </div>
-                ) : (
-                  <div className=" text-3xl" onClick={handleClickNav}>
-                    <HiOutlineBars3 />
-                  </div>
-                )}
+                </div>
               </div>
+            </div>
+            <div className=" flex justify-center">
+              {IsNavClick ? (
+                <div className=" overflow-y-hidden ">
+                  <MobileNav />
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
           </div>
         </div>
-        {IsNavClick && <MobileNav />}
-
-        {/* <div id="navbar" className="flex justify-center  ">
-          <nav className=" fixed hidden border-2 md:hidden border-slate-200 dark:border-slate-700 top-4 mt-2 z-50  w-[780px] md:w-fit rounded-xl bg-[#e3edfe] dark:bg-slate-950  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
+      </div>
+      <div className=" sm:hidden md:hidden">
+        <div id="navbar" className="flex justify-center  ">
+          <nav className=" fixed  border-2 border-slate-200 dark:border-slate-700 top-4 mt-2 z-50  w-[780px] md:w-fit rounded-xl bg-[#e3edfe] dark:bg-slate-950  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
             <ul className="text-[16px] md:bg-cyan-500  md: sm:bg-red-500 flex-row gap-8 dark:text-slate-300 flex font-medium items-center">
               <li className=" text-xl rounded-xl p-2">
                 <Link href="/">
@@ -166,7 +192,7 @@ const Navbar = () => {
               </button>
             </ul>
           </nav>
-        </div> */}
+        </div>
       </div>
     </>
   );
