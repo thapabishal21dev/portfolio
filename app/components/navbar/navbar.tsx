@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaHome } from "react-icons/fa";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import MobileNav from "../mblnav";
@@ -87,15 +87,15 @@ const Navbar = () => {
             <div className=" flex justify-between items-center">
               <Link href="/">
                 <div className=" flex flex-row gap-1 items-center dark:hover:bg-slate-900 px-3 py-2 hover:rounded-lg hover:cursor-pointer hover:bg-slate-200 transition rounded-lg delay-25 ease-in-out">
-                  <Image
+                  {/* <Image
                     className="w-6 mx-1 hover:text-blue-500 hover:scale-75 transition ease-in-out"
                     src="/astronaut.png"
                     width={400}
                     height={400}
                     alt="avatar"
                     property="priority"
-                  />
-                  <span className=" text-lg font-mono">Astronaut</span>
+                  /> */}
+                  <FaHome />
                 </div>
               </Link>
               <div className=" flex gap-4">
@@ -158,7 +158,7 @@ const Navbar = () => {
         <div id="navbar" className="flex justify-center  ">
           <nav className=" fixed  border-2 border-slate-200 dark:border-slate-700 top-4 mt-2 z-50  w-[780px] md:w-fit rounded-xl bg-[#e3edfe] dark:bg-slate-950  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
             <ul className="text-[16px] md:bg-cyan-500  md: sm:bg-red-500 flex-row gap-8 dark:text-slate-300 flex font-medium items-center">
-              <li className=" text-xl rounded-xl p-2">
+              {/* <li className=" text-xl rounded-xl p-2">
                 <Link href="/">
                   <Image
                     className="w-8 mx-1 hover:text-blue-500 hover:scale-75 transition ease-in-out"
@@ -168,7 +168,11 @@ const Navbar = () => {
                     alt="avatar"
                     property="priority"
                   />
+                  <FaHome />
                 </Link>
+              </li> */}
+              <li className=" dark:hover:text-green-600 hover:text-green-500 hover:underline hover:underline-offset-2  p-2">
+                <Link href="/about">Home</Link>
               </li>
               <li className=" dark:hover:text-cyan-600 hover:text-cyan-500 hover:underline hover:underline-offset-2  p-2">
                 <Link href="/about">About</Link>
