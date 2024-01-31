@@ -157,7 +157,7 @@ const Navbar = () => {
       <div className=" sm:hidden md:hidden">
         <div id="navbar" className="flex justify-center  ">
           <nav className=" fixed  border-2 border-slate-200 dark:border-slate-700 top-4 mt-2 z-50  w-[780px] md:w-fit rounded-xl bg-[#e3edfe] dark:bg-slate-950  h-14 backdrop-blur-[6px] transition-all duration-500 ease-out delay-0 bg-opacity-50">
-            <ul className="text-[16px] md:bg-cyan-500  md: sm:bg-red-500 flex-row gap-8 dark:text-slate-300 flex font-medium items-center">
+            <ul className=" p-2 text-[16px] md:bg-cyan-500  md: sm:bg-red-500 flex-row gap-8 dark:text-slate-300 flex font-medium items-center">
               {/* <li className=" text-xl rounded-xl p-2">
                 <Link href="/">
                   <Image
