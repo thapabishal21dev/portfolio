@@ -17,7 +17,6 @@ const Footer = () => {
   const [time, setTime] = useState(newDate);
   useEffect(() => {
     const timeId = setInterval(() => setTime(newDate), 1000);
-    console.log("timer");
     return () => {
       clearInterval(timeId);
     };

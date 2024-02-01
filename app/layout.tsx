@@ -5,8 +5,10 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import "./globals.css";
 import { useState } from "react";
-``;
 import { ApiDataContext } from "./context/context";
+interface IThemeType {
+  colorScheme: "light" | "dark";
+}
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,19 +23,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [updateTheme, setUpdateTheme] = useState<IThemeType>({
+    colorScheme: "dark",
+  });
   const [userApiData, setUserApiData] = useState<string | undefined>();
-  const [isNavLinkClicked, setIsLinkClicked] = useState<boolean>(false);
 
   return (
     <html lang="en" className="dark scroll-smooth ">
       <body className={`${inter.className}  dark:bg-slate-950 `}>
-        <div className="  ">
+        <div className="">
           <ApiDataContext.Provider
             value={{
               userApiData,
+              updateTheme,
               setUserApiData,
-              isNavLinkClicked,
-              setIsLinkClicked,
+              setUpdateTheme,
             }}
           >
             <Navbar />

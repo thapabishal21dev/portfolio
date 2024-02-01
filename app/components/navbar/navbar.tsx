@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaSun, FaMoon, FaHome } from "react-icons/fa";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import MobileNav from "../mblnav";
+import { ApiDataContext } from "@/app/context/context";
 interface INavbarElement {
   classList: {
     toggle: (className: string, force?: boolean) => void;
@@ -13,32 +14,27 @@ interface INavbarElement {
 }
 
 const Navbar = () => {
-  const [isClickedTheme, setIsClickedTheme] = useState(true);
+  const { setUpdateTheme } = useContext(ApiDataContext);
 
-  const toggleDarkMode = () => {
-    const getThemeValue = localStorage.getItem("theme");
-    setIsClickedTheme(!isClickedTheme);
+  // themeIconToggle
+  const [isClickedThemeIcon, setIsClickedThemeIcon] = useState(true);
 
-    const isDarkMode = getThemeValue === "dark";
-
-    if (isDarkMode) {
-      localStorage.removeItem("theme");
-      document.documentElement.classList.remove("dark");
-    } else {
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    }
-  };
-
-  const applyThemeOnLoad = () => {
-    const savedTheme = localStorage.getItem("theme");
-    setIsClickedTheme(savedTheme === "dark");
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+  const toggleThemeIcon = () => {
+    setIsClickedThemeIcon(!isClickedThemeIcon);
+    setUpdateTheme((prevTheme: any) => ({
+      colorScheme: prevTheme.colorScheme === "dark" ? "light" : "dark",
+    }));
   };
 
   useEffect(() => {
-    applyThemeOnLoad();
-  }, []);
+    if (isClickedThemeIcon === true) {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isClickedThemeIcon]);
 
   const [ismblNavIcon, setIsmblNavIcon] = useState<boolean>(false);
 
@@ -53,7 +49,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    applyThemeOnLoad();
     const handleScroll = (): void => {
       const navbar: INavbarElement | null = document.getElementById("navbar");
 
@@ -102,9 +97,9 @@ const Navbar = () => {
                 <div className="">
                   <button
                     className=" bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
-                    onClick={toggleDarkMode}
+                    onClick={toggleThemeIcon}
                   >
-                    {isClickedTheme ? (
+                    {isClickedThemeIcon ? (
                       <div className="text-white gap-2 items-center flex flex-row">
                         <span className=" text-xl">
                           <FaSun />
@@ -188,9 +183,9 @@ const Navbar = () => {
               </li>
               <button
                 className=" bg-slate-800 ml-20 md:ml-0 md:mx-4 w-30 bg-opacity-20 rounded-lg px-[10px] py-[6px] hover:bg-gray-200 dark:bg-slate-600 dark:hover:bg-gray-700 transition-all duration-500 ease-out delay-0 focus:outline-none  focus:ring focus:ring-blue-400 "
-                onClick={toggleDarkMode}
+                onClick={toggleThemeIcon}
               >
-                {isClickedTheme ? (
+                {isClickedThemeIcon ? (
                   <div className="text-white gap-2 items-center flex flex-row text-[18px]">
                     <FaSun />
                     <span className=" text-[14px] text-white gap-4 items-center flex flex-row ">

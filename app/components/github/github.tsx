@@ -1,20 +1,35 @@
 "use client";
+import { ApiDataContext } from "@/app/context/context";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 
+interface IThemeType {
+  colorScheme: "light" | "dark";
+}
+
 const Github = () => {
+  const { updateTheme, setUpdateTheme } = useContext(ApiDataContext);
+
   const thisYear = new Date();
   const [isClient, setIsClient] = useState<boolean>(false);
 
   useEffect(() => {
     setIsClient(true);
-  }, []);
+    setUpdateTheme((prevTheme: IThemeType) => ({
+      colorScheme: prevTheme.colorScheme === "dark" ? "light" : "dark",
+    }));
+  }, [setUpdateTheme]);
 
   const [selectedYear, setSelectedYear] = useState<number>();
 
   const handleChangeYear = (year: number) => {
     setSelectedYear(year);
+  };
+
+  const Default_Theme = {
+    light: ["#EBEDF0", "#9BE9A8", "#40C463", "#30A14E", "#216E39"],
+    dark: ["#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"],
   };
 
   return (
@@ -43,7 +58,7 @@ const Github = () => {
             2024
           </button>
         </div>
-        <div className=" border-slate-400 py-4 px-5  rounded-md border-2 mx-2 ">
+        <div className=" border-slate-400 py-4 px-5 rounded-md border-2 mx-2 ">
           {isClient ? (
             <GitHubCalendar
               style={{ margin: "6px auto" }}
@@ -51,8 +66,9 @@ const Github = () => {
               blockSize={10}
               blockMargin={3}
               fontSize={14}
-              colorScheme="dark"
               year={selectedYear}
+              colorScheme={updateTheme.colorScheme}
+              theme={Default_Theme}
             />
           ) : (
             <div>
@@ -69,7 +85,6 @@ const Github = () => {
             thapabishal21tech on Github - {thisYear.getFullYear()}
           </Link>
         </h1>
-        <h1 className=" text-center text-md "></h1>
       </div>
     </div>
   );
