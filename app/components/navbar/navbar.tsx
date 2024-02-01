@@ -167,7 +167,7 @@ const Navbar = () => {
                 </Link>
               </li> */}
               <li className=" dark:hover:text-green-600 hover:text-green-500 hover:underline hover:underline-offset-2  p-2">
-                <Link href="/about">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li className=" dark:hover:text-cyan-600 hover:text-cyan-500 hover:underline hover:underline-offset-2  p-2">
                 <Link href="/about">About</Link>
