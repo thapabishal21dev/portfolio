@@ -14,13 +14,18 @@ interface Quote {
 }
 const Footer = () => {
   let newDate = new Date();
-  const [time, setTime] = useState(newDate);
+  const [time, setTime] = useState(new Date());
+
   useEffect(() => {
-    const timeId = setInterval(() => setTime(newDate), 1000);
+    const timeId = setInterval(() => {
+      const newDate = new Date();
+      setTime(newDate);
+    }, 1000);
     return () => {
       clearInterval(timeId);
     };
-  });
+  }, []);
+
   const formattedTime = time.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",

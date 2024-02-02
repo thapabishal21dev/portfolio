@@ -3,7 +3,7 @@ import React from "react";
 import ListProjects from "./listsProjects";
 import { ProjectsList } from "@/app/lib/data/data";
 
-const ProjectsListsPage: React.FC = () => {
+const ProjectsListsPage = () => {
   return (
     <>
       <div className=" pt-24 bg-cover px-4 transition-opacity ease-in-out duration-600 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 to-black flex justify-center ">

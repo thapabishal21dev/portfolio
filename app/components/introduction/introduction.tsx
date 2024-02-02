@@ -42,6 +42,7 @@ const Introduction = () => {
                 <Image
                   className=" rounded-[50%] h-[150px] w-[150px] shadow-[rgba(0,_0,_0,_0.5)_0px_10px_10px]"
                   src="/portfolio.jpg"
+                  property="25"
                   width={200}
                   height={200}
                   alt="avatar"
@@ -91,7 +92,6 @@ const Introduction = () => {
                       <FaLinkedin />
                     </p>
                   </a>
-
                   <a
                     href="https://twitter.com/"
                     target="_blank"

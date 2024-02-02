@@ -71,6 +71,7 @@ const AboutPage = () => {
             width={700}
             height={700}
             alt="&nbsp;"
+            priority
           />
         </div>
         <div>

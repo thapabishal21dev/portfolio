@@ -16,10 +16,7 @@ const Github = () => {
 
   useEffect(() => {
     setIsClient(true);
-    setUpdateTheme((prevTheme: IThemeType) => ({
-      colorScheme: prevTheme.colorScheme === "dark" ? "light" : "dark",
-    }));
-  }, [setUpdateTheme]);
+  }, []);
 
   const [selectedYear, setSelectedYear] = useState<number>();
 
