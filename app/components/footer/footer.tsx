@@ -173,7 +173,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col justify-center items-center border-t mt-10 border-slate-400 dark:border-slate-700 ">
+            <div className=" flex flex-col justify-center items-center border-t mt-10 border-slate-400 dark:border-slate-700">
               <div className=" flex flex-col justify-center items-center my-4 ">
                 <div className=" flex items-center justify-center gap-4">
                   <span className="  font-bold text-sm font-mono dark:text-slate-500">
@@ -216,7 +216,8 @@ const Footer = () => {
                       BISHAL THAPA.
                       <i className="devicon-flutter-plain colored"></i>
                     </span>{" "}
-                    All rights reserved &copy; {getCurrentYear}.
+                    All rights reserved &copy;{" "}
+                    {getCurrentYear ? <span>{getCurrentYear}</span> : <></>}.
                   </h1>
                 </div>
               </div>
@@ -229,4 +230,4 @@ const Footer = () => {
 };
 
 export default Footer;
-// with 💙.
+// with 💙

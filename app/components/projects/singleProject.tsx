@@ -75,11 +75,14 @@ const SingleProject = () => {
                 <div className=" flex justify-center ">
                   <div className=" dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 bg-gradient-to-r from-slate-200 to-slate-400 rounded px-20 py-16 md:p-12 sm:p-6">
                     <Image
-                      className="border-2 rounded-xl border-gray-200 "
+                      src={selectProject.projectImg ?? "/wallpaper.png"}
+                      alt={
+                        selectProject.projectTitle
+                          ? `${selectProject.projectTitle}`
+                          : "projectImg"
+                      }
                       width={1000}
                       height={1000}
-                      src={selectProject.projectImg ?? "/wallpaper.png"}
-                      alt={selectProject.projectDescription || "ProjectImg"}
                       priority
                     />
                   </div>
