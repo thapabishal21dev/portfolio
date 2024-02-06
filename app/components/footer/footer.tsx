@@ -14,22 +14,6 @@ interface Quote {
 }
 const Footer = () => {
   let newDate = new Date();
-  const [time, setTime] = useState(new Date());
-
-  useEffect(() => {
-    const timeId = setInterval(() => {
-      const newDate = new Date();
-      setTime(newDate);
-    }, 1000);
-    return () => {
-      clearInterval(timeId);
-    };
-  }, []);
-
-  const formattedTime = time.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
 
   const getCurrentYear = newDate.getFullYear();
 
@@ -168,7 +152,6 @@ const Footer = () => {
                     <p>
                       <FaClock />
                     </p>
-                    <p>{`${formattedTime} Kathmandu,Nepal`}</p>
                   </div>
                 </div>
               </div>
