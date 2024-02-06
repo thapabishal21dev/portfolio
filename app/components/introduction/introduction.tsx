@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,6 +30,7 @@ const Introduction = () => {
                     <Image
                       className="rounded-full w-8"
                       src="/nepalflag.svg"
+                      priority
                       width={200}
                       height={200}
                       alt="avatar"

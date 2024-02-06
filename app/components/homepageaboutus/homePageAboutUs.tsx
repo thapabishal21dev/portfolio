@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Techstack from "../techstack";
 import { TbBrandNextjs } from "react-icons/tb";

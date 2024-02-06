@@ -5,8 +5,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import React, { useState, useEffect } from "react";
-import { FaClock } from "react-icons/fa6";
-
 interface Quote {
   _id: string;
   content: string;
@@ -147,11 +145,6 @@ const Footer = () => {
                         <p>loading...</p>
                       </div>
                     )}
-                  </div>
-                  <div className=" flex flex-row sm:justify-center items-center gap-2 text-sm text-slate-200 font-bold">
-                    <p>
-                      <FaClock />
-                    </p>
                   </div>
                 </div>
               </div>

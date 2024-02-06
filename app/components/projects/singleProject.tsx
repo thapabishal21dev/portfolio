@@ -3,12 +3,12 @@ import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { PiArrowLeftLight } from "react-icons/pi";
-import Techstack from "../techstack";
 import { ApiDataContext } from "@/app/context/context";
 import { ProjectsList } from "@/app/lib/data/data";
 import { IProject } from "@/app/lib/data/data";
 import { useRouter } from "next/navigation";
 import { RiCodeSSlashLine, RiLinksLine } from "react-icons/ri";
+import Techstack from "../techstack";
 
 const SingleProject = () => {
   const [selectProject, setSelectProject] = useState<IProject>({} as IProject);

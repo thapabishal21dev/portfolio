@@ -4,12 +4,8 @@ import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 
-interface IThemeType {
-  colorScheme: "light" | "dark";
-}
-
 const Github = () => {
-  const { updateTheme, setUpdateTheme } = useContext(ApiDataContext);
+  const { updateTheme } = useContext(ApiDataContext);
 
   const thisYear = new Date();
   const [isClient, setIsClient] = useState<boolean>(false);
@@ -24,7 +20,7 @@ const Github = () => {
     setSelectedYear(year);
   };
 
-  const Default_Theme = {
+  const Default_Theme: any = {
     light: ["#EBEDF0", "#9BE9A8", "#40C463", "#30A14E", "#216E39"],
     dark: ["#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"],
   };
